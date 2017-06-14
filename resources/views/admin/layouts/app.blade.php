@@ -58,6 +58,7 @@
         <script src="{{url('dist/js/demo.js')}}"></script>
         <script src="{{ url('dist/js/FileUpload/jquery.ui.widget.js') }}"></script>
         <script src="{{ url('dist/js/FileUpload/jquery.iframe-transport.js') }}"></script>
+        <script src="{{ url('dist/js/FileUpload/load-image.all.min.js') }}"></script>
         <script src="{{ url('dist/js/FileUpload/jquery.fileupload.js') }}"></script>
         <script src="{{ url('dist/js/FileUpload/jquery.fileupload-process.js') }}"></script>
         <script src="{{ url('dist/js/FileUpload/jquery.fileupload-image.js') }}"></script>

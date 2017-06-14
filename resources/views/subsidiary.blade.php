@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+    <body>
     <div class="header wearp-main"></div>
     <div class="subsidiary-banner main-banner">
         <div class="banner-title">
@@ -156,3 +157,4 @@
     </div>
     <a href="#0" class="cd-top">Top</a>
 @endsection
+

@@ -20,7 +20,7 @@
                 </li>
                 <li>
                     <span><img src="images/group/contact_us_icon2.png"></span>
-                    <p>(0571)88071501</p>
+                    <p>0571-88073031</p>
                 </li>
                 <li>
                     <span><img src="images/group/contact_us_icon3.png"></span>
@@ -31,3 +31,4 @@
     </div>
     <a href="#0" class="cd-top">Top</a>
 @endsection
+

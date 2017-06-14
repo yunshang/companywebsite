@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="main-countent">
-        <div class="lanrenzhijia ">
+        <div class="main-countent-nav ">
             <div class="title cf">
                 <ul class="title-list fl cf ">
                     <li class="on">集团新闻</li>

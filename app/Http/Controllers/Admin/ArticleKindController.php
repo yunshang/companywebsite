@@ -3,61 +3,54 @@
 namespace App\Http\Controllers\Admin;
 
 use Auth;
-use App\Repositories\Admin\ArticleRepository;
+use App\Repositories\Admin\ArticleKindRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Storage;
 use League\Flysystem\Filesystem;
 
-class ArticlesController extends Controller
+class ArticleKindController extends Controller
 {
-    private $article;
-    public function __construct(ArticleRepository $article)
+    private $articlekind;
+    public function __construct(ArticleKindRepository $articlekind)
     {
-        $this->article = $article;
+        $this->articlekind = $articlekind;
         $this->middleware('admin');
     }
     public function index()
     {
-        $articles = $this->article->getArticlesFeed();
+        $articlekinds = $this->articlekind->getArticlesFeed();
         if(user()->hasRole('admin') || user()->hasRole('admin-one')){
-            return view('admin.articles.index',compact('articles'));
+            return view('admin.articlekinds.index',compact('articlekinds'));
         }
         return redirect()->route('admin.index');
     }
 
-    //创建问题页面
     public function create()
     {
         if(user()->hasRole('admin')){
-            return view("admin.articles.create");
+            return view("admin.articlekinds.create");
         }
     }
 
-    //保存问题
     public function store(Request $request)
     {
 //        $topics = $this->question->normalizeTopics($request->get('topics'));
         $data = [
-            'title' => $request->get('title'),
-            'body' => $request->get('body'),
-            'user_id' => Auth::id(),
-            'cover' => $request->get('img'),
-            'is_first' => $request->get('is_first'),
-            'article_kind_id' => $request->get('kind'),
+            'name' => $request->get('name'),
         ];
-        $article = $this->article->Article($data);
+        $articlekind = $this->articlekind->ArticleKInd($data);
 //        Auth::user()->increment('questions_count');
 //        $question->topics()->attach($topics);
-        return redirect()->route('admin.articles', [$article->id]);
+        return redirect()->route('admin.articlekind', [$articlekind->id]);
     }
 
     //编辑问题页面
     public function edit($id)
     {
         if(user()->hasRole('admin') || user()->hasRole('admin-one')){
-            $article = $this->article->byId($id);
-            return view("admin.articles.edit",compact('article'));
+            $articlekind = $this->articlekind->byId($id);
+            return view("admin.articlekinds.edit",compact('articlekind'));
         }
         return redirect()->route('admin.index');
 
@@ -74,28 +67,23 @@ class ArticlesController extends Controller
     //编辑问题
     public function update(Request $request,$id)
     {
-        $article = $this->article->byId($id);
+        $article = $this->articlekind->byId($id);
 //        $topics = $this->question->normalizeTopics($request->get('topics'));
         $article->update([
-            'title'=>$request->get('title'),
-            'body'=>$request->get('body'),
-            'cover' => $request->get('img'),
-            'is_first'=>$request->get('is_first'),
-            'article_kind_id' => $request->get('kind'),
+            'name'=>$request->get('name'),
         ]);
 
 //        $article->topics()->sync($topics);
-        return redirect()->route('admin.articles');
+        return redirect()->route('admin.articlekind');
     }
 
-    //删除问题
     public function destroy($id)
     {
         if(user()->hasRole('admin') || user()->hasRole('admin-one')){
-            $article = $this->article->byId($id);
+            $article = $this->articlekind->byId($id);
             $article->delete();
-            return redirect()->route('admin.article');
+            return redirect()->route('admin.articlekind');
         }
-        return redirect()->route('admin.index');
+        return redirect()->route('admin.articlekind');
     }
 }

@@ -19,6 +19,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('/group', 'GroupController@index');
 Route::get('/culture', 'CultureController@index');
 Route::get('/joinus', 'JoinusController@index');
+Route::post('/joinus','JoinusController@store');
 Route::get('/subsidiary', 'SubsidiaryController@index');
 Route::get('/contactus', 'ContactusController@index');
 Route::get('/new', 'NewController@index');
@@ -89,9 +90,22 @@ Route::group(['namespace' => 'Admin'], function () {
 
     Route::get('/admin/articles/index','ArticlesController@index')->name('admin.articles');
     Route::get('/admin/articles/create','ArticlesController@create');//创建问题
-    Route::post('/admin/articles/uploadimage','ArticlesController@uploadimage');//创建问题
+    Route::post('/admin/articles/uploadimage','ArticlesController@uploadimage');//上传图片
+    Route::patch('/admin/articles/uploadimage','ArticlesController@uploadimage');//上传图片
     Route::post('/admin/articles','ArticlesController@store');//创建问题
     Route::get('/admin/articles/edit/{id}','ArticlesController@edit');//编辑问题页面
     Route::patch('/admin/articles/{id}','ArticlesController@update');//编辑问题
     Route::delete('/admin/articles/{id}','ArticlesController@destroy');//删除问题
+
+    Route::get('/admin/articlekind/index','ArticleKindController@index')->name('admin.articlekind');
+    Route::get('/admin/articlekind/create','ArticleKindController@create');//创建问题
+    Route::post('/admin/articlekind','ArticlekindController@store');
+    Route::get('/admin/articlekind/edit/{id}','ArticlekindController@edit');
+    Route::patch('/admin/articlekind/{id}','ArticleKindController@update');//编辑问题
+    Route::delete('/admin/articlekind/{id}','ArticleKindController@destroy');//删除问题
+
+    Route::get('/admin/resume/index','ResumeController@index')->name('admin.resume');
+    Route::get('/admin/resume/show/{id}','ResumeController@show');
+    Route::delete('/admin/resume/{id}','ResumeController@destroy');//删除问题
+    Route::get('/admin/resume/download/{id}', 'ResumeController@getDownload');
 });

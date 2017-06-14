@@ -1,126 +1,136 @@
 @extends('layouts.app')
 
 @section('content')
-    <body>
     <div class="header wearp-main"></div>
     <div class="group-banner">
         <img src="images/group/banner.png" width="100%">
     </div>
+    <!--企业简介-->
+    <div class="group-content-title">
+        <div class="group-title-triangle"></div>
+        <h2>企业简介</h2>
+        <h4>COMPANY PROFILE</h4>
+    </div>
+    <div class="group-content-box">
+        <div class="group-content-box-text">
+            <p>
+                <span>浙</span>江长和控股有限公司前身成立于2013年3月，注册资金5000万元人民币。凭借多年的市场敏锐度与成熟的管理机制于2016年5月完成重组，实行集团化运营。
+            </p>
+            <p>
+                目前，长和控股旗下已有6家全资子公司，是一家专业从事二手车卡分期、电商平台、资产管理、融资租赁、评估鉴定、不良资产清收、资产证券化等为一体的创新型消费金融服务公司，与中国人保、工商银行、中国银行、杭州银行等多家金融机构达成为战略合作伙伴，互惠互信。
+            </p>
+            <p>
+                企业总部位于杭州，现有员工900余人，具有多年汽车消费金融、风险管理、法务催收、保险、资产处置等从业经验。其中汽车类相关专业占90%以上，风控及法务队伍庞大，是一支年轻化、知识化、专业化的富有超强执行力的优秀团队。
+            </p>
+            <a href="culture.html" ><span>+ 查看详情</span></a>
+        </div>
+        <div class="group-content-box-img">
+            <img src="images/group/group_jianj_pic.png">
+        </div>
+    </div>
+    <!--企业文化-->
+    <div class="group-content-title">
+        <div class="group-title-triangle"></div>
+        <h2>企业文化</h2>
+        <h4>CORPORATE AULTURE</h4>
+    </div>
+    <div class="group-content-box">
+        <ul>
+            <li>
+                <div class="group-sbox-img">
+                    <img src="images/group/group_wenh_pic1.png">
+                </div>
+                <a href="culture.html" target="_blank" class="group-sbox-content purpose">
+                    <p class="p4">宗旨</p>
+                    <p class="p1">PURPOSE</p>
+                    <p class="p2">热情、专业、高效、优质</p>
+                    <p class="p3">+ 查看详情</p>
+                </a>
+            </li>
+            <li class="group-content-marleft">
+                <div class="group-sbox-img">
+                    <img src="images/group/group_wenh_pic2.png">
+                </div>
+                <a href="culture.html" target="_blank"  class="group-sbox-content value">
+                    <p class="p4">价值观</p>
+                    <p class="p1">VALUE</p>
+                    <p class="p2">热情、专业、高效、优质</p>
+                    <p class="p3">+ 查看详情</p>
+                </a>
+            </li>
+            <li>
+                <a href="culture.html" target="_blank"  class="group-sbox-content vision">
+                    <p class="p4">愿景</p>
+                    <p class="p1">VISION</p>
+                    <p class="p2">热情、专业、高效、优质</p>
+                    <p class="p3">+ 查看详情</p>
+                </a>
+                <div class="group-sbox-img">
+                    <img src="images/group/group_wenh_pic3.png">
+                </div>
+            </li>
+            <li class="group-content-marleft">
+                <a href="culture.html" target="_blank"  class="group-sbox-content all-win">
+                    <p class="p4">共赢</p>
+                    <p class="p1">ALL-WIN</p>
+                    <p class="p2">热情、专业、高效、优质</p>
+                    <p class="p3">+ 查看详情</p>
+                </a>
+                <div class="group-sbox-img">
+                    <img src="images/group/group_wenh_pic4.png">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--新闻中心-->
+    <div class="group-content-title">
+        <div class="group-title-triangle"></div>
+        <h2>新闻中心</h2>
+        <h4>NEWS CENTER</h4>
+    </div>
+    <div class="group-content-box">
+        <ul class="group-news-ul">
+            <li>
+                <div class="group-news-sbox-img">
+                    <img src="images/group/news_pic11.jpg">
+                </div>
+                <h4>【新血液 新力量】2017年长和控股第一期学员培训开启！</h4>
+                <p>为了帮助新员工尽快了解公司、转变角色、融入长和大家庭，2017年4月15日，公司开展了“2017年长和控股第一期新员工培训”，共有135名新员工参加了此次培训。课程内容……</p>
+                <a href="news-detail3.html" class="group-lock-more">
+                    +查看详情
+                </a>
+            </li>
+            <li>
+                <div class="group-news-sbox-img">
+                    <img src="images/group/news-pic1.jpg">
+                </div>
+                <h4>长和控股2017年第一季度经营会议圆满落幕！</h4>
+                <p>4月22日，长和控股在杭州总部会议室召开了2017年第一季度经营会议，本次会议围绕“人品立身、技能立业”展开，会议由长和控股副总裁葛益钦先生主持，各部门负责人和骨干成员及集团核心……</p>
+                <a href="news-detail.html"  class="group-lock-more">
+                    +查看详情
+                </a>
+            </li>
+            <li>
+                <div class="group-news-sbox-img">
+                    <img src="images/group/news_pic19.jpg">
+                </div>
+                <h4>【从专业人才到管理高手】“银天鹅”第二期培训有啥亮点？</h4>
+                <p>为了满足学员们的需求，“银天鹅”计划第二期培训开课啦！本期课程由知名讲师郭维骐主讲，通过两天的培训学习，长和控股中层干部们学习了如何提升执行力、加强沟通、目标管理以及有效激励员工等方面的管理……</p>
+                <a href="news-detail2.html"  class="group-lock-more">
+                    +查看详情
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <!--合作伙伴-->
     <div class="group-countent wearp-main">
-        <!--企业简介-->
         <div class="group-countent-modular">
-            <div class="group-modular-text1 fl"><img src="/images/group/text-qyjj.png" alt="企业简介"></div>
-            <div class="title-line"></div>
-            <div class="group-modular-main">
-                <div class="group-modular-main-img fr qyjz-img-move">
-                    <img src="images/group/modular_pic_qyjz1.png">
-                </div>
-                <div class="group-modular-main-version fl qyjz-text-move">
-                    <p>浙江长和控股有限公司前身成立于2013年3月，注册资金5000万元人民币。凭借多年的市场敏锐度与成熟的管理机制于2016年5月完成重组，实行集团化运营。企业总部位于杭州，现有员工900余人，其中汽车类相关专业占90%以上，风控及法务队伍庞大，是一支年轻化、知识化、专业化的富有超强执行力的优秀团队。</p>
-                    <p>目前，浙江长和控股有限公司旗下已有6家全资子公司，行业遍及按揭贷款、车险、电商平台、资产管理、融资租赁、评估鉴定、不良资产清收、资产证券化等 。旗下杭州长合汽车销售服务有限公司，成立不到2年，已迅速覆盖全国18个省120多个城市，个人车贷申请总额超20亿元，创造了二手车金融直营团队的……</p>
-                    <span> <a href="culture.html"> > 查看详情</a> </span>
-                </div>
+            <div class="group-content-title">
+                <div class="group-title-triangle"></div>
+                <h2>合作伙伴</h2>
+                <h4>COOPERATION PARTNER</h4>
             </div>
-        </div>
-        <!--企业动态-->
-        <div class="group-countent-modular">
-            <div class="group-modular-text2 fr"><img src="images/group/text_qydt.png" alt="企业动态"></div>
-            <div class="title-line"></div>
-            <div class="group-modular-main">
-                <div class="group-modular-main-version fr">
-                    <p>4月22日，长和控股在杭州总部会议室召开了2017年第一季度经营会议，本次会议围绕“人品立身、技能立业”展开，会议由长和控股副总裁葛益钦先生主持，各部门负责人和骨干成员及集团核心领导出席了本次会议。</p>
-                    <p>会议伊始，长和控股董事长吴红丽女士发表了重要讲话，总结回顾了上一阶段公司的发展，明确接下来的工作重点，部署今年主要工作任务，对各区域经理和管理层给予了厚望，动员管理层继续努力开拓、壮大长和。</p>
-                    <p>会上，销售总监丰凯针对呼叫中心工作对接进行了探讨，法务经理潘光艳为大家展示了风险案例分析，风控总监胡平对相关工作对接进行了发言……</p>
-                    <span> <a href="news-detail.html"> > 查看详情</a></span>
-                </div>
-                <div class="group-modular-main-img fl">
-                    <img src="images/group/modular_pic_qyjz2.png">
-                </div>
-            </div>
-        </div>
-        <!--组织架构-->
-        <div class="group-countent-modular">
-            <div class="group-modular-text1 fl"><img src="images/group/text_zzjg.png" alt="组织架构"></div>
-            <div class="title-line"></div>
-            <div class="group-modular-main">
-                <div class="group-modular-main-pic" style="width: 80%">
-                    <img src="images/group/zzjg_main_pic.png" width="100%">
-                </div>
-            </div>
-        </div>
-        <!--企业文化-->
-        <div class="group-countent-modular">
-            <div class="group-modular-text2 fr"><img src="images/group/text-qywh.png" alt="企业文化"></div>
-            <div class="title-line"></div>
-            <div id="group-modular-content">
-                <ul>
-                    <li>
-                        <a href="culture.html" class="a1">
-                            <img src="images/group/pic_smzz.png">
-                            <div class ="divA">
-                                <p class="p1">长和价值观</p>
-                                <p class="p2">客户至上、诚信尽职、以人为本、共生共赢。</p>
-                            </div>
-                        </a>
-                        <a href="culture.html" class = "a2">
-                            <p class="p4">长和价值观</p>
-                            <p class="p5">客户至上：客户的满意是我们所有工作的出发点和落脚点，打造便捷安全的金融服务产品，为客户的资金安全保驾护航。帮助车商提高经营效率、实现收益最大化。诚信尽职：以服务求生存，以创新求发展，追求卓越，崇尚一流。恪守诚信，视“超出客户期望”为工作方向，尽职尽责。</p>
-                            <p class="p7">查看详情></p>
-                        </a>
-                    </li>
-                    <li class="pic_lnjzg">
-                        <a href="culture.html" class="a1">
-                            <img src="images/group/pic_lnjzg.png">
-                            <div class ="divA">
-                                <p class="p1">长和愿景</p>
-                                <p class="p2">实现“中国汽车金融服务国民品牌”的宏伟目标。</p>
-                            </div>
-                        </a>
-                        <a href="culture.html" class = "a2">
-                            <p class="p4">长和愿景</p>
-                            <p class="p5">挑战与机遇并存的汽车金融领域，长和控股定将砥砺深耕，为撬动这片万亿级新蓝海迅速布局立足现在 连接未来。 </p>
-                            <p class="p7">查看详情></p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="culture.html" class="a1">
-                            <img src="images/group/pic_jszz.png">
-                            <div class ="divA">
-                                <p class="p1">服务宗旨</p>
-                                <p class="p2">“热情、专业、高效、优质”</p>
-                            </div>
-                        </a>
-                        <a href="culture.html" class = "a2">
-                            <p class="p4">服务宗旨</p>
-                            <p class="p5">成立以来，浙江长和控股有限公司始终坚持“热情、专业、高效、优质”的服务宗旨。</p>
-                            <p class="p7">查看详情></p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <script type="text/javascript">
-            $('li').mouseenter(function(){
-                $(this).find('.divA').stop().animate({bottom:'-66px'});
-                $(this).find('.a2').css({left:'0'})
-                $(this).children('.a2').find('.p4').css({left:'0'})
-                $(this).children('.a2').find('.p5').css({left:'0'})
-                $(this).children('.a2').find('.p6').css({transform:'scale(1)'})
-                $(this).children('.a2').find('.p7').css({bottom:'25px'})
-            })
-            $('li').mouseleave(function(){
-                $(this).find('.divA').stop().animate({bottom:'0px'});
-                $(this).find('.a2').css({left:-$(this).width()})
-                $(this).children('.a2').find('.p4').css({left:-$(this).width()})
-                $(this).children('.a2').find('.p5').css({left:-$(this).width()})
-                $(this).children('.a2').find('.p6').css({transform:'scale(1.3)'})
-                $(this).children('.a2').find('.p7').css({bottom:'-50px'})
-            })
-        </script>
-        <!--合作伙伴-->
-        <div class="group-countent-modular">
-            <div class="group-modular-text1 fl"><img src="images/group/text-hzhb.png" alt="合作伙伴"></div>
-            <div class="title-line"></div>
             <div class="group-modular-content">
                 <ul class="group-modular-content-partner">
                     <li><a href="http://www.picc.com.cn/" target="_Blank"> <img src="images/hezuo_picc.jpg"></a> </li>
@@ -137,3 +147,6 @@
     </div>
     <a href="#0" class="cd-top">Top</a>
 @endsection
+@section('other-js')
+@show
+

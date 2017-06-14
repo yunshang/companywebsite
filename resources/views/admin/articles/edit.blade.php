@@ -24,6 +24,26 @@
             <div class="nav-tabs-custom">
                 <div class="tab-content">
 
+
+                    <div class="row fileupload-buttonbar" style="padding-left:15px;">
+                        <div class="thumbnail col-sm-6">
+                            <img id="weixin_show" style="height:180px;margin-top:10px;margin-bottom:8px;"  src="/uploads/images/BzfQvgShfkLAHuHt.jpg" data-holder-rendered="true">
+                            <div class="progress progress-striped active" role="progressbar" aria-valuemin="10" aria-valuemax="100" aria-valuenow="0">
+                                <div id="weixin_progress" class="progress-bar progress-bar-success" style="width:0%;">
+                                </div>
+                            </div>
+                            <div class="caption" align="center">
+<span id="weixin_upload" class="btn btn-primary fileinput-button">
+<span>上传封面</span>
+<input type="file" id="weixin_image" name="files" multiple>
+</span>
+                                <input type="hidden" name="img" id="file_valu"/>
+                                <a id="weixin_cancle" href="javascript:void(0)" class="btn btn-warning" role="button" onclick="cancleUpload()" style="display:none">删除</a>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="tab-pane active">
                         <div class="form-group">
                             <label>标题
@@ -37,13 +57,11 @@
                                 <small class="text-red">*</small>
                             </label>
 
-                            {{--<select name="topics[]"--}}
-                                    {{--class="js-example-placeholder-multiple js-data-example-ajax form-control"--}}
-                                    {{--multiple="multiple">--}}
-                                {{--@foreach($question->topics as $topic)--}}
-                                    {{--<option value="{{$topic->id}}" selected="selected">{{$topic->name}}</option>--}}
-                                {{--@endforeach--}}
-                            {{--</select>--}}
+                            <select name="" class="js-example-placeholder-single form-control" >
+                                @foreach(\App\ArticleKind::all() as $kind)
+                                    <option value="{{$kind->id}}" selected="selected">{{$kind->name}}</option>
+                                @endforeach
+                            </select>
 
                         </div>
 
@@ -148,6 +166,27 @@
                 escapeMarkup: function (markup) { return markup; }
             });
         })
+
+        $(function() {
+            $("#weixin_image").fileupload({
+                url: '/admin/articles/uploadimage',
+                sequentialUploads: true
+            }).bind('fileuploadprogress', function (e, data) {
+                var progress = parseInt(data.loaded / data.total * 100, 10);
+                $("#weixin_progress").css('width',progress + '%');
+                $("#weixin_progress").html(progress + '%');
+            }).bind('fileuploaddone', function (e, data) {
+                $("#weixin_show").attr("src","/uploads/"+data.result.path);
+                $("#file_valu").val("/uploads/"+data.result.path);
+                $("#weixin_upload").css({display:"none"});
+                $("#weixin_cancle").css({display:""});
+            });
+        });
+        function cancleUpload() {
+            $("#file_valu").val("");
+            $("#weixin_upload").css({display:""});
+            $("#weixin_cancle").css({display:"none"});
+        }
     </script>
 @endsection
 

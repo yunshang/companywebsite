@@ -137,9 +137,12 @@
 <script src="{{url('/js/source/jquery.min.js')}}"></script>
 <script src="{{url('/js/source/jquery.easyfader.min.js')}}"></script>
 <script src="{{url('/js/source/jquery.SuperSlide.2.1.1.js')}}"></script>
+<script src="{{url('/js/source/jquery.niceHover.js')}}"></script>
+<script src="{{url('/js/source/koala.min.1.5.js')}}"></script>
+<script src="{{url('/js/source/terminator2.2.min.js')}}"></script>
 <script src="{{url('/js/source/own.js')}}"></script>
+<script src="{{url('/js/source/index.js')}}"></script>
 
-<link rel="stylesheet" href="{{url('css/source/style.css')}}">
 
 <!-- 配置文件 -->
 <script type="text/javascript" src="{{ asset('vendor/ueditor/ueditor.config.js') }}"></script>
@@ -157,6 +160,51 @@
 
 <script type="text/javascript">
     $(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:3,trigger:"click"});
+</script>
+
+<script type="text/javascript">
+    $(".group-lock-more").niceHover({weight:2,color:"#8d2123"});
+</script>
+
+<script type="text/javascript">
+    $('.group-content-box>ul>li').mouseenter(function(){
+        $(this).find('.group-sbox-content>.p4').stop().animate({marginTop:'60px',fontSize:'30px'});
+
+        $(this).find('.group-sbox-content').find('.p1').stop().animate({fontSize:'14px'});
+        $(this).find('.group-sbox-content').find('.p2').stop().animate({marginTop:'20px'});
+        $(this).find('.group-sbox-content').find('.p3').stop().animate({marginTop:'20px'});
+    })
+    $('li').mouseleave(function(){
+        $(this).find('.group-sbox-content>.p4').stop().animate({marginTop:'80px',fontSize:'40px'});
+        $(this).find('.group-sbox-content').find('.p1').stop().animate({fontSize:'16px'});
+        $(this).find('.group-sbox-content').find('.p2').stop().animate({marginTop:'136px'});
+        $(this).find('.group-sbox-content').find('.p3').stop().animate({marginTop:'136px'});
+//            $(this).find('.divA').stop().animate({bottom:'0px'});
+//            $(this).find('.a2').css({left:-$(this).width()})
+//            $(this).children('.a2').find('.p4').css({left:-$(this).width()})
+//            $(this).children('.a2').find('.p5').css({left:-$(this).width()})
+//            $(this).children('.a2').find('.p6').css({transform:'scale(1.3)'})
+//            $(this).children('.a2').find('.p7').css({bottom:'-50px'})
+    })
+</script>
+
+<script type="text/javascript">
+    Qfast.add('widgets', { path: "/js/source/terminator2.2.min.js", type: "js", requires: ['fx'] });
+    Qfast(false, 'widgets', function () {
+        K.tabs({
+            id: 'fsD2',   //焦点图包裹id
+            conId: "D1pic2",  //** 大图域包裹id
+            tabId:"D2fBt",
+            tabTn:"a",
+            conCn: '.fcon', //** 大图域配置class
+            auto: 1,   //自动播放 1或0
+            effect: 'fade',   //效果配置
+            eType: 'click', //** 鼠标事件
+            pageBt:true,//是否有按钮切换页码
+            bns: ['.prev', '.next'],//** 前后按钮配置class
+            interval: 3000  //** 停顿时间
+        })
+    })
 </script>
 <div class="footer "></div>
 </div>

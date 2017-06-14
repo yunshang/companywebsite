@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-    <body>
     <div class="header wearp-main"></div>
     <div class="cultre-banner main-banner">
         <div class="banner-title">
@@ -9,7 +8,7 @@
         </div>
     </div>
     <div class="main-countent">
-        <div class="lanrenzhijia ">
+        <div class=" main-countent-nav">
             <div class="title cf">
                 <ul class="title-list fl cf ">
                     <li class="on">企业简介</li>
@@ -25,14 +24,17 @@
                         <div class="cultre-main">
                             <div class="tabs-main-changh main-hxjz">
                                 <div class="main-left-pic fl">
-                                    <img src="images/group/about_main_pic.png">
+                                    <img src="images/group/culture_main_pic1.jpg">
                                 </div>
                                 <div class="main-right-text fr">
                                     <div class="text-english">COMPANY <span class="text-english-color">PROFILE</span></div>
                                     <div class="text-title">企业简介</div>
                                     <div class="text-main">
-                                        <p>浙江长和控股有限公司前身成立于2013年3月，注册资金5000万元人民币。凭借多年的市场敏锐度与成熟的管理机制于2016年5月完成重组，实行集团化运营。企业总部位于杭州，现有员工900余人，其中汽车类相关专业占90%以上，风控及法务队伍庞大，是一支年轻化、知识化、专业化的富有超强执行力的优秀团队。</p>
-                                        <p>目前，浙江长和控股有限公司旗下已有6家全资子公司，行业遍及按揭贷款、车险、电商平台、资产管理、融资租赁、评估鉴定、不良资产清收、资产证券化等 。旗下杭州长合汽车销售服务有限公司，成立不到2年，已迅速覆盖全国18个省120多个城市，个人车贷申请总额超20亿元，创造了二手车金融直营团队的新纪录。</p>
+                                        <p>浙江长和控股有限公司前身成立于2013年3月，注册资金5000万元人民币。凭借多年的市场敏锐度与成熟的管理机制于2016年5月完成重组，实行集团化运营。</p>
+                                        <p>目前，长和控股旗下已有6家全资子公司，是一家专业从事二手车卡分期、电商平台、资产管理、融资租赁、评估鉴定、不良资产清收、资产证券化等为一体的创新型消费金融服务公司，与中国人保、工商银行、中国银行、杭州银行等多家金融机构达成为战略合作伙伴，互惠互信。</p>
+                                        <p>企业总部位于杭州，现有员工900余人，具有多年汽车消费金融、风险管理、法务催收、保险、资产处置等从业经验。其中汽车类相关专业占90%以上，风控及法务队伍庞大，是一支年轻化、知识化、专业化的富有超强执行力的优秀团队。</p>
+                                        <p>自成立以来，长和控股以精湛专业的金融服务、严谨先进的风控理念，为消费者和车商提供了全面、便捷、高效、安全的二手车按揭业务。通过团队不懈的努力创造，2017年期间，车贷业务已覆盖全国18个省120多个城市，个人车贷申请总额超50亿元，创造了二手车金融直营团队的新纪录。</p>
+                                        <p>长和控股旨在为车商提供成本低、放款快的二手车消费贷，促进成交，提高客单价。为客户量身打造二手车按揭和车延保方案，基本做到当天选车、当天过户、当天放款，让客户体验轻松购车的快感。同时，深化银行合作，帮助银行获取优质资产。</p>
                                     </div>
                                     <div class="text-number">
                                         <ul>
@@ -56,6 +58,47 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="picScroll-left">
+                                <div class="hd">
+                                    <a class="hd-left fl" href="javascript:void(0)"><img src="images/group/cefiro/arrow-left.png" /></a>
+                                    <a class="hd-right fr" href="javascript:void(0)"><img src="images/group/cefiro/arrow-right.png"/></a>
+                                </div>
+                                <div class="bd">
+                                    <ul class="picList">
+                                        <li>
+                                            <div class="pic"><a href="#"><img src="images/group/cefiro/company1.jpg" /></a></div>
+                                        </li>
+                                        <li>
+                                            <div class="pic"><a href="#"><img src="images/group/cefiro/company3.jpg" /></a></div>
+                                        </li>
+                                        <li>
+                                            <div class="pic"><a href="#"><img src="images/group/cefiro/company4.jpg"/></a></div>
+                                        </li>
+                                        <li>
+                                            <div class="pic"><a href="#"><img src="images/group/cefiro/company5.jpg" /></a></div>
+                                        </li>
+                                        <li>
+                                            <div class="pic"><a href="#"><img src="images/group/cefiro/company6.jpg" /></a></div>
+                                        </li>
+                                        <li>
+                                            <div class="pic"><a href="#"><img src="images/group/cefiro/company7.jpg" /></a></div>
+                                        </li>
+                                        <li>
+                                            <div class="pic"><a href="#"><img src="images/group/cefiro/company8.jpg"/></a></div>
+                                        </li>
+                                        <li>
+                                            <div class="pic"><a href="#"><img src="images/group/cefiro/company9.jpg" /></a></div>
+                                        </li>
+                                        <li>
+                                            <div class="pic"><a href="#"><img src="images/group/cefiro/company10.jpg" /></a></div>
+                                        </li>
+                                        <li>
+                                            <div class="pic"><a href="#"><img src="images/group/cefiro/company11.jpg" /></a></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--董事长致辞-->
                             <div class="tabs-main-changh main-ldzz">
                                 <div class="main-right-text fl">
                                     <div class="text-english">LEADER'S SPEECH</div>
@@ -110,8 +153,7 @@
                                     <div class="text-title">长和愿景</div>
                                     <div class="text-main">
                                         <p>挑战与机遇并存的汽车金融领域.</p>
-                                        <p>长和控股定将砥砺深耕，为撬动这片万亿级新蓝海迅速布局。
-                                            立足现在，连接未来。</p>
+                                        <p>长和控股定将砥砺深耕，为撬动这片万亿级新蓝海迅速布局。立足现在，连接未来。</p>
                                         <p>保持稳健、快步的发展态势，秉承着一切为了客户的核心经营理念.</p>
                                         <p>实现“中国汽车金融服务国民品牌”的宏伟目标。</p>
                                     </div>

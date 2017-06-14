@@ -24,42 +24,47 @@
                 <div class="tab-content">
 
                     <!---按钮组-->
-                    <div class="form-group ">
-                        <label for="thumb" class="col-sm-2 control-label">封面</label>
-                        <div class="col-sm-2 fileupload-buttonbar">
-                  <span class="btn btn-success fileinput-button">
-                       <input type="file" name="files" multiple id="fileupload">
-                      <div class="files"> </div>
-                  </span>
-                        </div>
-                        <div class="col-sm-6 fileupload-buttonbar">
+                    {{--<div class="form-group ">--}}
+                        {{--<label for="thumb" class="col-sm-2 control-label">封面</label>--}}
+                        {{--<div class="col-sm-2 fileupload-buttonbar">--}}
+                  {{--<span class="btn btn-success fileinput-button">--}}
+                       {{--<input type="file" name="files" multiple id="fileupload">--}}
+                      {{--<div class="files"> </div>--}}
+                  {{--</span>--}}
+                        {{--</div>--}}
+                        {{--<div class="col-sm-6 fileupload-buttonbar">--}}
 
 
-                            <button type="button" id="startupload" class="btn btn-primary start">
-                                <i class="glyphicon glyphicon-upload"></i>
-                                <span>上传</span>
-                            </button>
-                            {{--<button type="button" class="btn btn-warning cancel">--}}
-                                {{--<i class="glyphicon glyphicon-ban-circle"></i>--}}
-                                {{--<span>Cancel upload</span>--}}
+                            {{--<button type="button" id="startupload" class="btn btn-primary start">--}}
+                                {{--<i class="glyphicon glyphicon-upload"></i>--}}
+                                {{--<span>上传</span>--}}
                             {{--</button>--}}
-                            {{--<button type="button" class="btn btn-danger delete">--}}
-                                {{--<i class="glyphicon glyphicon-trash"></i>--}}
-                                {{--<span>Delete</span>--}}
-                            {{--</button>--}}
-                        </div>
-                    </div>
-                    <!---进度条-->
-                    {{--<div class="form-group">--}}
-                        {{--<div class="progress col-sm-7 padding0 margin-left15">--}}
-                            {{--<div id="progressbar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:0%">--}}
-                            {{--</div>--}}
                         {{--</div>--}}
                     {{--</div>--}}
 
-                    <div class="progress progress-striped active" role="progressbar" aria-valuemin="10" aria-valuemax="100" aria-valuenow="0">
-                        <div id="progressbar" class="progress-bar progress-bar-success" style="width:0%;"></div>
+                    {{--<div class="progress progress-striped active" role="progressbar" aria-valuemin="10" aria-valuemax="100" aria-valuenow="0">--}}
+                        {{--<div id="progressbar" class="progress-bar progress-bar-success" style="width:0%;"></div>--}}
+                    {{--</div>--}}
+
+                    <div class="row fileupload-buttonbar" style="padding-left:15px;">
+                        <div class="thumbnail col-sm-6">
+                            <img id="weixin_show" style="height:180px;margin-top:10px;margin-bottom:8px;"  src="/uploads/images/BzfQvgShfkLAHuHt.jpg" data-holder-rendered="true">
+                            <div class="progress progress-striped active" role="progressbar" aria-valuemin="10" aria-valuemax="100" aria-valuenow="0">
+                                <div id="weixin_progress" class="progress-bar progress-bar-success" style="width:0%;">
+                                </div>
+                            </div>
+                            <div class="caption" align="center">
+<span id="weixin_upload" class="btn btn-primary fileinput-button">
+<span>上传封面</span>
+<input type="file" id="weixin_image" name="files" multiple>
+</span>
+                                <input type="hidden" name="img" id="file_valu"/>
+                                <a id="weixin_cancle" href="javascript:void(0)" class="btn btn-warning" role="button" onclick="cancleUpload()" style="display:none">删除</a>
+                            </div>
+                        </div>
                     </div>
+
+                    {{--end--}}
 
                     <div class="tab-pane active">
                         <div class="form-group">
@@ -73,10 +78,10 @@
                             <label>分类
                                 <small class="text-red">*</small>
                             </label>
-
-                            <select name="topics[]" class="js-example-placeholder-multiple js-data-example-ajax form-control" multiple="multiple">
-                                <option value="AL">Alabama</option>
-                                <option value="WY">Wyoming</option>
+                            <select name="kind" class="js-example-placeholder-single form-control" >
+                                @foreach(\App\ArticleKind::all() as $kind)
+                                    <option value="{{$kind->id}}" selected="selected">{{$kind->name}}</option>
+                                @endforeach
                             </select>
                         </div>
 
@@ -176,54 +181,74 @@
         })
     </script>
     <script>
-        $(function () {
-            $('#fileupload').fileupload({
-                dataType: 'json',
-                progressall: function (e, data) {
-                    var progress = parseInt(data.loaded / data.total * 100, 10);
-                    $('#progressbar').css(
-                        'width',
-                        progress + '%'
-                    );
-                },
-                add: function (e, data) {
-                    data.context = $('#startupload').click(function () {
-                        data.submit();
-                    });
-                },
-                submit: function (e, data) {
+        {{--$(function () {--}}
+            {{--$('#fileupload').fileupload({--}}
+                {{--dataType: 'json',--}}
+                {{--progressall: function (e, data) {--}}
+                    {{--var progress = parseInt(data.loaded / data.total * 100, 10);--}}
+                    {{--$('#progressbar').css(--}}
+                        {{--'width',--}}
+                        {{--progress + '%'--}}
+                    {{--);--}}
+                {{--},--}}
+                {{--add: function (e, data) {--}}
+                    {{--data.context = $('#startupload').click(function () {--}}
+                        {{--data.submit();--}}
+                    {{--});--}}
+                {{--},--}}
+                {{--submit: function (e, data) {--}}
 
-                },
-                autoUpload:false,
+                {{--},--}}
+                {{--autoUpload:false,--}}
 
-                formData:{_token:"{{csrf_token()}}"},
-                url:'/admin/articles/uploadimage',
-                done: function (e, data) {
-                    console.log(data);
-                    if(data.result.status == 'success')
-                    {
-                        $('#thumb').val(data.result.path);
-                        var imgshow = '<div class="images_zone"><input type="hidden" name="img" value="'+data.result.path+'" /><span><img src=/uploads/'+data.result.path+' /></span><a href="javascript:;">删除</a></div>';
-                        jQuery('.files').append(imgshow);
-                        alert('上传成功！') ;
-                    }else{
-                        alert('上传失败！') ;
-                    }
-                }
+                {{--formData:{_token:"{{csrf_token()}}"},--}}
+                {{--url:'/admin/articles/uploadimage',--}}
+                {{--done: function (e, data) {--}}
+                    {{--console.log(data);--}}
+                    {{--if(data.result.status == 'success')--}}
+                    {{--{--}}
+                        {{--$('#thumb').val(data.result.path);--}}
+                        {{--var imgshow = '<div class="images_zone"><input type="hidden" name="img" value="'+data.result.path+'" /><span><img src=/uploads/'+data.result.path+' /></span><a href="javascript:;">删除</a></div>';--}}
+                        {{--jQuery('.files').append(imgshow);--}}
+                        {{--alert('上传成功！') ;--}}
+                    {{--}else{--}}
+                        {{--alert('上传失败！') ;--}}
+                    {{--}--}}
+                {{--}--}}
+            {{--});--}}
+        {{--});--}}
+        {{--//图片删除--}}
+        {{--$('.files').on({--}}
+            {{--mouseenter:function(){--}}
+                {{--$(this).find('a').show();--}}
+            {{--},--}}
+            {{--mouseleave:function(){--}}
+                {{--$(this).find('a').hide();--}}
+            {{--},--}}
+        {{--},'.images_zone');--}}
+        {{--$('.files').on('click','.images_zone a',function(){--}}
+            {{--$(this).parent().remove();--}}
+        {{--});--}}
+        $(function() {
+            $("#weixin_image").fileupload({
+                url: '/admin/articles/uploadimage',
+                sequentialUploads: true
+            }).bind('fileuploadprogress', function (e, data) {
+                var progress = parseInt(data.loaded / data.total * 100, 10);
+                $("#weixin_progress").css('width',progress + '%');
+                $("#weixin_progress").html(progress + '%');
+            }).bind('fileuploaddone', function (e, data) {
+                $("#weixin_show").attr("src","/uploads/"+data.result.path);
+                $("#file_valu").val("/uploads/"+data.result.path);
+                $("#weixin_upload").css({display:"none"});
+                $("#weixin_cancle").css({display:""});
             });
         });
-        //图片删除
-        $('.files').on({
-            mouseenter:function(){
-                $(this).find('a').show();
-            },
-            mouseleave:function(){
-                $(this).find('a').hide();
-            },
-        },'.images_zone');
-        $('.files').on('click','.images_zone a',function(){
-            $(this).parent().remove();
-        });
+        function cancleUpload() {
+            $("#file_valu").val("");
+            $("#weixin_upload").css({display:""});
+            $("#weixin_cancle").css({display:"none"});
+        }
     </script>
 @endsection
 
