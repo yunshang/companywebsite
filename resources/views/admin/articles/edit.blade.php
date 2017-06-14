@@ -57,9 +57,9 @@
                                 <small class="text-red">*</small>
                             </label>
 
-                            <select name="" class="js-example-placeholder-single form-control" >
+                            <select name="kind" class="js-example-placeholder-single form-control" >
                                 @foreach(\App\ArticleKind::all() as $kind)
-                                    <option value="{{$kind->id}}" selected="selected">{{$kind->name}}</option>
+                                    <option value="{{$kind->id}}">{{$kind->name}}</option>
                                 @endforeach
                             </select>
 

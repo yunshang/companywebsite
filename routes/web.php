@@ -108,4 +108,11 @@ Route::group(['namespace' => 'Admin'], function () {
     Route::get('/admin/resume/show/{id}','ResumeController@show');
     Route::delete('/admin/resume/{id}','ResumeController@destroy');//删除问题
     Route::get('/admin/resume/download/{id}', 'ResumeController@getDownload');
+
+    Route::get('/admin/positions/index','PositionsController@index')->name('admin.positions');
+    Route::get('/admin/positions/create','PositionsController@create');//创建问题
+    Route::post('/admin/positions','PositionsController@store');
+    Route::get('/admin/positions/edit/{id}','PositionsController@edit');
+    Route::patch('/admin/positions/{id}','PositionsController@update');//编辑问题
+    Route::delete('/admin/positions/{id}','PositionsController@destroy');//删除问题
 });

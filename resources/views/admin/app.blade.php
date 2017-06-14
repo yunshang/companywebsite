@@ -171,6 +171,7 @@
                         <li><a href="{{url('admin/question/index')}}"><i class="fa fa-circle-o"></i>问题</a></li>
                         <li><a href="{{url('admin/articlekind/index')}}"><i class="fa fa-circle-o"></i>新闻分类</a></li>
                         <li><a href="{{url('admin/resume/index')}}"><i class="fa fa-circle-o"></i>简历管理</a></li>
+                        <li><a href="{{url('admin/positions/index')}}"><i class="fa fa-circle-o"></i>职位管理</a></li>
                         <li><a href="{{url('admin/comments/index')}}"><i class="fa fa-circle-o"></i>评论</a></li>
                         <li><a href="{{url('admin/topics/index')}}"><i class="fa fa-circle-o"></i>标签</a></li>
                     </ul>
