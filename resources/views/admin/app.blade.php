@@ -77,13 +77,12 @@
 
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="{{$admin->info()->avatar}}" class="user-image" alt="User Image">
+                            <img src="{{url('dist/img/avatar.jpg')}}" class="user-image" alt="User Image">
                             <span class="hidden-xs">{{$admin->info()->name}}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <li class="user-header">
-                                <img src="{{$admin->info()->avatar}}" class="img-circle" alt="User Image">
-
+                                <img src="{{url('dist/img/avatar.jpg')}}" class="img-circle" alt="User Image">
                                 <p>
                                     changhe
                                     <small>Member since Nov. 2017</small>
@@ -95,7 +94,7 @@
                                     <a href="#" class="btn btn-default btn-flat">个人资料</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">退出</a>
+                                    <a href="logout" class="btn btn-default btn-flat">退出</a>
                                 </div>
                             </li>
                         </ul>
@@ -115,7 +114,7 @@
         <section class="sidebar">
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="{{$admin->info()->avatar}}" class="img-circle" alt="User Image">
+                    <img src="{{url('dist/img/avatar.jpg')}}" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
                     <p>{{$admin->info()->name}}</p>
