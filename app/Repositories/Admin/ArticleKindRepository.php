@@ -3,7 +3,6 @@ namespace App\Repositories\Admin;
 
 use App\Article;
 use App\ArticleKind;
-use App\Topic;
 
 class ArticleKindRepository
 {

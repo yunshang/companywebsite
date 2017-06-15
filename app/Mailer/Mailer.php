@@ -13,7 +13,7 @@ class Mailer
         $content = new SendCloudTemplate($template, $data);
 
         Mail::raw($content, function ($message)  use($email){
-            $message->from('gehuachun@outlook.com', 'JellyBean');
+            $message->from('alshin@126.com', 'li123456');
 
             $message->to($email);
         });

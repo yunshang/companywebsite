@@ -81,7 +81,6 @@ class CreateAdmin extends Command
             'password' => bcrypt($data['password']),
             'api_token'=>str_random(60),
             'is_active'=>1,
-            'setting'=> ['city'=>'','site'=>'','github'=>'','bio'=>'']
         ]);
         $user->assignRole('admin');
         return $user;

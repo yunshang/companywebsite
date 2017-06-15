@@ -2,26 +2,26 @@
 @section('content-header')
     <h1>
         内容管理
-        <small>问题</small>
+        <small>企业风采</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{url('/dashboard')}}"><i class="fa fa-dashboard"></i> 主页</a></li>
         <li>内容管理</li>
-        <li class="active">问题</li>
+        <li class="active">企业风采管理</li>
     </ol>
 @stop
 
 @section('content')
-    <a href="{{url('admin/articles/create')}}" class="btn btn-primary margin-bottom"><i class="fa fa-paint-brush"
-                                                                                        style="margin-right: 6px"></i>撰写新文章</a>
+    <a href="{{url('admin/enterprisestyles/create')}}" class="btn btn-primary margin-bottom"><i class="fa fa-paint-brush"
+                                                                                         style="margin-right: 6px"></i>撰写新企业风采</a>
     <div class="box box-primary">
         <div class="box-header with-border">
-            <h3 class="box-title">问题列表</h3>
+            <h3 class="box-title">企业风采列表</h3>
             <div class="box-tools">
                 <form action="" method="get">
                     <div class="input-group">
                         <input type="text" class="form-control input-sm pull-right" name="s_title"
-                               style="width: 150px;" placeholder="搜问题标题">
+                               style="width: 150px;" placeholder="搜标签关键字">
                         <div class="input-group-btn">
                             <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
                         </div>
@@ -37,7 +37,7 @@
                 <tr>
                     <th>操作</th>
                     <th>标题</th>
-                    <th>作者</th>
+                    <th>副标题</th>
                     <th>发布时间</th>
                     <th>更新时间</th>
                 </tr>
@@ -45,11 +45,11 @@
                 <!--tr-th end-->
 
                 <tbody>
-                @foreach($articles as $article)
+                @foreach($enterprise_styles as $enterprise_style)
                     <tr>
                         <td>
-                            <a style="font-size: 16px;padding: 4px" href="/admin/articles/edit/{{$article->id}}" class="ui button"><i class="fa fa-fw fa-pencil" title="修改"></i></a>
-                            <form action="/admin/articles/{{$article->id}}" method="POST" class="delete-form action-btn" style="display: inline-block;cursor: pointer">
+                            <a style="font-size: 16px;padding: 4px" href="/admin/enterprisestyles/edit/{{$enterprise_style->id}}" class="ui button"><i class="fa fa-fw fa-pencil" title="查看"></i></a>
+                            <form action="/admin/enterprisestyles/{{$enterprise_style->id}}" method="POST" class="delete-form action-btn" style="display: inline-block;cursor: pointer">
                                 {{method_field('DELETE')}}
                                 {!! csrf_field() !!}
                                 <button style="font-size: 16px;color: #dd4b39;padding: 4px;" class="ui button">
@@ -57,10 +57,10 @@
                                 </button>
                             </form>
                         </td>
-                        <td class="text-muted">{{$article->title}}</td>
-                        <td class="text-green">{{$article->user->name}}</td>
-                        <td class="text-navy">{{$article->created_at}}4</td>
-                        <td class="text-navy">{{$article->updated_at}}</td>
+                        <td class="text-muted">{{$enterprise_style->title}}</td>
+                        <td class="text-muted">{{$enterprise_style->subtitle}}</td>
+                        <td class="text-navy">{{$enterprise_style->created_at}}</td>
+                        <td class="text-navy">{{$enterprise_style->updated_at}}</td>
                     </tr>
                 @endforeach
 
@@ -69,4 +69,3 @@
         </div>
     </div>
 @stop
-

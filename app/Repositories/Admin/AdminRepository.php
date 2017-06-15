@@ -4,10 +4,9 @@
 namespace App\Repositories\Admin;
 
 
-use App\Comment;
-use App\Question;
-use App\Topic;
+use App\ArticleKind;
 use App\User;
+use App\Article;
 
 class AdminRepository
 {
@@ -24,44 +23,20 @@ class AdminRepository
                     'url' => '/admin/users'
                 ],
                 [
-                    'count' => Question::all()->count(),
-                    'title' => '问题',
-                    'sup' => '篇',
-                    'icon' => 'ion-document',
-                    'bck' => 'bg-green',
-                    'url' => '/admin/question/index'
-                ],
-                [
-                    'count' => Comment::all()->count(),
-                    'title' => '评论',
+                    'count' => Article::all()->count(),
+                    'title' => '新闻',
                     'sup' => '条',
                     'icon' => 'ion-android-chat',
                     'bck' => 'bg-red',
-                    'url' => 'admin/comments/index'
+                    'url' => 'admin/articles/index'
                 ],
                 [
-                    'count' => Topic::all()->count(),
-                    'title' => '标签',
+                    'count' => ArticleKind::all()->count(),
+                    'title' => '新闻分类',
                     'sup' => '条',
                     'icon' => 'ion-pricetags',
                     'bck' => 'bg-olive',
-                    'url' => 'admin/topics/index'
-                ],
-                [
-                    'count' => 44,
-                    'title' => '邮件',
-                    'sup' => '封',
-                    'icon' => 'ion-ios-email-outline',
-                    'bck' => 'bg-orange',
-                    'url' => 'admin/mail/index'
-                ],
-                [
-                    'count' => 44,
-                    'title' => '消息',
-                    'sup' => '条',
-                    'icon' => 'ion-film-marker',
-                    'bck' => 'bg-yellow',
-                    'url' => 'admin/messages/index'
+                    'url' => 'admin/articlekind/index'
                 ],
                 [
                     'count' => 0,
@@ -71,14 +46,6 @@ class AdminRepository
                     'bck' => 'bg-purple',
                     'url' => 'admin/video/index'
                 ],
-                [
-                    'count' => 0,
-                    'title' => '音乐',
-                    'sup' => '首',
-                    'icon' => 'ion-music-note',
-                    'bck' => 'bg-maroon',
-                    'url' => 'admin/music/index'
-                ]
             ]
         );
     }

@@ -29,7 +29,6 @@ class CreateUsersTable extends Migration
             $table->integer('followers_count')->default(0);
             $table->integer('followings_count')->default(0);
             $table->integer('experience_count')->default(0);
-            $table->json('setting')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
