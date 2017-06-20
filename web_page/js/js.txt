@@ -1,0 +1,13 @@
+//*******  own.js  *****************//  全局js 【主导航、和二级导航】
+
+//*******  jquery.SuperSlide.2.1.1.js  *****//  左右滚动图 【走进长和、人才招聘；两个页面】
+     <script src="js/terminator2.2.min.js"></script><!--员工福利轮播-->
+     <script src="js/koala.min.1.5.js"></script><!--员工福利轮播-->
+
+//*******  terminator2.2.min.js  *****//
+
+//*******  jquery.min.js">      *****//  jq版本
+
+//*******  jquery.easyfader.min.js  *****//jq版本绑定
+
+<script src="js/index.js"></script>   // 招聘信息隐藏和显示

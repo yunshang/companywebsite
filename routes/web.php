@@ -1,8 +1,7 @@
 <?php
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
+|-------------------------------------------------------------------------- | Web Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -31,7 +30,7 @@ Route::get('/email/verify/{token}',['as'=>'email.verify','uses'=>'EmailControlle
 
 
 Route::group(['namespace' => 'Admin'], function () {
-    Route::get('/dashboard', 'AdminController@index')->name('admin.index'); //后台首页
+    Route::get('/admin', 'AdminController@index')->name('admin.index'); //后台首页
     Route::get('/admin/profile','AdminController@adminInfo');//管理员资料
     Route::get('/admin/users','UsersController@index')->name('admin.users');//系统用户信息
     Route::get('/admin/users/{id}','UsersController@edit');//系统用户信息
@@ -72,4 +71,7 @@ Route::group(['namespace' => 'Admin'], function () {
     Route::get('/admin/enterprisestyles/edit/{id}','EnterpriseStyleController@edit');
     Route::patch('/admin/enterprisestyles/{id}','EnterpriseStyleController@update');
     Route::delete('/admin/enterprisestyles/{id}','EnterpriseStyleController@destroy');
+
+    Route::get('/admin/settings','SettingController@companyInfo');//管理员资料
+    Route::post('/admin/settings/{id}','SettingController@update');//系统用户信息修改
 });

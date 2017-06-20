@@ -14,7 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \App\Console\Commands\InstallProject::class,
-        \App\Console\Commands\CreateAdmin::class
+        \App\Console\Commands\CreateAdmin::class,
+        \App\Console\Commands\FillSetting::class
     ];
 
     /**

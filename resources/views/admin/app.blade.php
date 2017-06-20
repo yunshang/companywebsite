@@ -130,6 +130,7 @@
                         <li><a href="{{url('admin/resume/index')}}"><i class="fa fa-circle-o"></i>简历管理</a></li>
                         <li><a href="{{url('admin/positions/index')}}"><i class="fa fa-circle-o"></i>职位管理</a></li>
                         <li><a href="{{url('admin/enterprisestyles/index')}}"><i class="fa fa-circle-o"></i>企业风采管理</a></li>
+                        <li><a href="{{url('admin/settings')}}"><i class="fa fa-circle-o"></i>公司信息设置</a></li>
                     </ul>
                 </li>
             </ul>
