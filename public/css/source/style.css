@@ -63,7 +63,7 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
     clear: both;
 }
 .boot-page{
-    background: url("/images/boot-page/bg.png") no-repeat top center;
+    background: url("/images/boot-page/bg.jpg") no-repeat top center;
 }
 .boot-page-main-text{
     text-align: center;
@@ -102,7 +102,7 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
 .boot-page-top-link ul li:hover{
     float: left;
     margin: 20px 10px;
-    background: url("/images/boot-page/top_icon.png") no-repeat;
+    background: url("../images/boot-page/top_icon.png") no-repeat;
 
     display: block;
 }
@@ -545,7 +545,7 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
 .Value-img>ul>li .large-text ul li i{
     display: inline-block;
     width: 5px;
-    height: 8px;
+    height: 13px;
     background-color: #333333;
 }
 .Value-img>ul>li .large-text ul li span{
@@ -1208,7 +1208,7 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
 
 /***********************************联系我们****************************/
 .contact-banner{
-    background: url("/images/group/contact_us_banner.png");
+    background: url("/images/group/contact_us_banner.jpg");
     width: 100%;
 }
 .banner-title{
@@ -1258,7 +1258,7 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
     padding-top: 30px;
 }
 .cultre-banner{
-    background: url("/images/group/culture_banner.png");
+    background: url("/images/group/culture_banner.jpg");
 }
 .tabs-main-changh{
     overflow: hidden;
@@ -1307,8 +1307,11 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
 .main-yuanj{
     background: url("/images/group/culture_main_pic1.png") no-repeat;
 }
+.main-yuanj .text-main{
+    width: 80%;
+}
 .main-chjs{
-    background: url("/images/group/culture_main_pic3.png") no-repeat;
+    background: url("/images/group/culture_main_pic3.jpg") no-repeat;
 }
 .main-ldzz{
     background: url("/images/group/about_main_pic1.png") no-repeat;
@@ -1318,16 +1321,35 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
 }
 .main-right-text .text-main{
     line-height: 40px;
-    margin-top: 20px;
+    margin-top: 40px;
+}
+.main-right-text .text-main h3{
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    border-left: 5px solid #8d2123;
+    padding-left: 10px;
+    height: 20px;
+    line-height: 20px;
+    margin: 20px 0 10px 0;
 }
 .main-right-text .text-main p{
+    line-height: 32px;
+}
+.main-qyjj .text-main{
+    width: 795px;
+    margin: 50px auto 20px auto;
+}
+.main-qyjj .text-main p{
     text-indent: 2em;
+    line-height: 34px;
+    font-size: 16px;
 }
 .main-yuanj .text-main{
     color: #fff;
 }
 .main-hxjz .main-right-text{
-    width: 65%;
+  width: 65%;
 }
 .main-yuanj .main-right-text{
     width: 50%;
@@ -1388,11 +1410,11 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
     color: #333;
     margin-left: 20px;
 }.picScroll-left{
-     overflow: hidden;
-     position: relative;
- }
+    overflow: hidden;
+    position: relative;
+}
 .picScroll-left .hd .hd-left{
-    left: 20px;
+   left: 20px;
 }
 .picScroll-left .hd .hd-right{
     right: 20px;
@@ -1435,9 +1457,9 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
     text-indent: 2em;
     font-size: 14px;
 }
-/**************************新闻中心***************************************/
+    /**************************新闻中心***************************************/
 .news-banner{
-    background: url("/images/group/news_banner.png");
+    background: url("/images/group/news_banner.jpg");
 }
 .main-news{
     border-bottom: 1px solid #ccc;
@@ -1500,7 +1522,7 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
 }
 /***********************************************关于我们*******************************/
 .about-us-banner{
-    background: url("/images/group/about_banner.png");
+    background: url("/images/group/about_banner.jpg");
 }
 .text-number{
     overflow: hidden;
@@ -1524,7 +1546,7 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
 
 /************************子公司**************************/
 .subsidiary-banner{
-    background: url('/images/group/sub_corp_banner.png') no-repeat center center;
+    background: url('/images/group/sub_corp_banner.jpg') no-repeat center center;
 }
 .subsidiary-main{
     padding-bottom: 20px;
@@ -1591,7 +1613,7 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
 
 /*******************************人才招聘****************************/
 .join-banner{
-    background: url("/images/group/join_banner.png");
+    background: url("/images/group/join_banner.jpg");
 }
 .join-us-main{
     border: 1px solid #8d2123;
@@ -1853,7 +1875,7 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
 .insure-banner{
     height: 540px;
     width: 100%;
-    background: url('/images/automobile/yanbao_banner.png') no-repeat top center;
+    background: url('/images/automobile/yanbao_banner.jpg') no-repeat top center;
 }
 .insure-h2{
     width: 528px;
@@ -1871,7 +1893,7 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
 .insure-modular-content{
     height: 484px;
     color:#fff;
-    background: url('/images/automobile/yanbao_main_pic.png') no-repeat;
+    background: url('../images/automobile/yanbao_main_pic.png') no-repeat;
 }
 .insure-modular-content>.details{
     float: right;
@@ -1991,7 +2013,7 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
 .insure-choice{
     width:100%;
     height: 420px;
-    background:url('/images/automobile/yanbao_main_pic2.png') no-repeat;
+    background:url('/images/automobile/yanbao_main_pic2.jpg') no-repeat;
 }
 .insure-choice>.insure-modular{
     height: 100%;
@@ -2157,4 +2179,32 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
     margin: 150px auto 0 auto;
     font-size: 16px;
     line-height: 24px;
+}
+/************************** 风控系统详情页 ************************************/
+.venture-banner{
+    background: url("/images/automobile/fengk_banner.jpg") no-repeat center center;
+    height: 540px;
+}
+.venture-Modules{
+    overflow: hidden;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 50px 0;
+    border-bottom: 1px solid #ccc;
+}
+.venture-img{
+    width: 42%;
+}
+.venture-text{
+    width: 50%;
+    margin-top: 70px;
+}
+.venture-text h1{
+    font-size: 34px;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+.venture-text p{
+    font-size: 18px;
+    line-height: 40px;
 }

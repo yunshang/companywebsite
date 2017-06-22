@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <body style="background-color: #fff">
+<body style="background-color: #fff">
     <div class="boot-page">
         <div class="boot-page-top wearp-main">
             <div class="boot-page-top-logo fl">
@@ -24,8 +24,8 @@
                 <a href="#">
                     <dl class="dl-horizontal">
                         <dt>
-                        <h3>杭州长合投资管理合伙企业</h3>
-                        <img src="images/boot-page/sub_corp_main_pic2.png">
+                            <h3>杭州长合投资管理合伙企业</h3>
+                            <img src="images/boot-page/sub_corp_main_pic2.png">
                         </dt>
                         <dd class="popup">
                             <ul>
@@ -43,8 +43,8 @@
                 <a href="#">
                     <dl class="dl-horizontal">
                         <dt>
-                        <h3>杭州长和信息技术有限公司</h3>
-                        <img src="images/boot-page/sub_corp_main_pic3.png"  height="160">
+                            <h3>杭州长和信息技术有限公司</h3>
+                            <img src="images/boot-page/sub_corp_main_pic3.png"  height="160">
                         </dt>
                         <dd class="popup">
                             <ul>
@@ -62,8 +62,8 @@
                 <a href="automobile.html" target="_blank">
                     <dl class="dl-horizontal">
                         <dt>
-                        <h3>杭州长合汽车销售服务有限公司</h3>
-                        <img src="images/boot-page/sub_corp_main_pic5.png"  height="160">
+                            <h3>杭州长合汽车销售服务有限公司</h3>
+                            <img src="images/boot-page/sub_corp_main_pic5.png"  height="160">
                         </dt>
                         <dd class="popup">
                             <ul>
@@ -82,8 +82,8 @@
                 <a href="#">
                     <dl class="dl-horizontal">
                         <dt>
-                        <h3>杭州泉禾二手车鉴定评估有限公司</h3>
-                        <img src="images/boot-page/sub_corp_main_pic4.png"  height="160">
+                            <h3>杭州泉禾二手车鉴定评估有限公司</h3>
+                            <img src="images/boot-page/sub_corp_main_pic4.png"  height="160">
                         </dt>
                         <dd class="popup">
                             <ul>
@@ -101,8 +101,8 @@
                 <a href="#">
                     <dl class="dl-horizontal">
                         <dt>
-                        <h3>浙江皓庭资产管理有限公司</h3>
-                        <img src="images/boot-page/sub_corp_main_pic1.png"  height="160">
+                            <h3>浙江皓庭资产管理有限公司</h3>
+                            <img src="images/boot-page/sub_corp_main_pic1.png"  height="160">
                         </dt>
                         <dd class="popup">
                             <ul>
@@ -120,13 +120,13 @@
                 <a href="#">
                     <dl class="dl-horizontal">
                         <dt>
-                        <h3>长合融资租赁（上海）有限公司</h3>
-                        <img src="images/boot-page/sub_corp_main_pic.png" height="160">
+                            <h3>长和融资租赁（上海）有限公司</h3>
+                            <img src="images/boot-page/sub_corp_main_pic.png" height="160">
                         </dt>
                         <dd class="popup">
                             <ul>
                                 <li>
-                                    <h4>长合融资租赁（上海）有限公司</h4>
+                                    <h4>长和融资租赁（上海）有限公司</h4>
                                     <p>网站内容正在完善中……</p>
                                     <span>进入网站</span>
                                 </li>
@@ -136,4 +136,5 @@
                 </a>
             </div>
         </div>
+    </div>
 @endsection

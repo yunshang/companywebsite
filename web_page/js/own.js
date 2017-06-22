@@ -4,22 +4,8 @@
 $(document).ready(function () {
     /***************************top foot  调用*/
     var id = $(".header").attr("id");
-    $(".header").load("base/top-group.html",null,function(){
-        var headerlog=$(".header-logo img");
-        switch (id) {
-            case "automobile":
-                headerlog.attr("src", "images/automobile/changh_logo.png").attr("style","margin-top:20px");
-                break;
-           //LOGO不一样换一个automobile1
-           /* case "automobile1":
-                headerlog.attr("src", "images/automobile/changh_logo.png");
-                break; */
-            default:
-                break;
-        }
-    });
-    $(".footer").load("base/foot-group.html",null,function(){
 
+    $(".footer").load("base/foot-group.html",null,function(){
         var footerlog=$(".footer-content-main-logo img");
         switch (id) {
             case "automobile":
