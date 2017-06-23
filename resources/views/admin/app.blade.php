@@ -4,7 +4,7 @@
 @section('main-header')
     @inject('admin','App\AdminUser\User')
     <header class="main-header" id="app">
-        <a href="{{url('/dashboard')}}" class="logo">
+        <a href="{{url('/admin')}}" class="logo">
             <span class="logo-mini">ADL</span>
             <span class="logo-lg"><b>AdminLara</b></span>
         </a>
@@ -96,7 +96,7 @@
             <ul class="sidebar-menu">
                 <li class="header">主导航栏</li>
                 <li>
-                    <a href="{{url('/dashboard')}}">
+                    <a href="{{url('/admin')}}">
                         <i class="fa fa-dashboard"></i> <span>控制面板</span>
                     </a>
                 </li>
@@ -130,6 +130,7 @@
                         <li><a href="{{url('admin/resume/index')}}"><i class="fa fa-circle-o"></i>简历管理</a></li>
                         <li><a href="{{url('admin/positions/index')}}"><i class="fa fa-circle-o"></i>职位管理</a></li>
                         <li><a href="{{url('admin/enterprisestyles/index')}}"><i class="fa fa-circle-o"></i>企业风采管理</a></li>
+                        <li><a href="{{url('admin/entries/index')}}"><i class="fa fa-circle-o"></i>员工条目管理</a></li>
                         <li><a href="{{url('admin/settings')}}"><i class="fa fa-circle-o"></i>公司信息设置</a></li>
                     </ul>
                 </li>

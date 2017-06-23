@@ -72,6 +72,13 @@ Route::group(['namespace' => 'Admin'], function () {
     Route::patch('/admin/enterprisestyles/{id}','EnterpriseStyleController@update');
     Route::delete('/admin/enterprisestyles/{id}','EnterpriseStyleController@destroy');
 
+    Route::get('/admin/entries/index','EntryController@index')->name('admin.entries');
+    Route::get('/admin/entries/create','EntryController@create');
+    Route::post('/admin/entries','EntryController@store');
+    Route::get('/admin/entries/edit/{id}','EntryController@edit');
+    Route::patch('/admin/entries/{id}','EntryController@update');
+    Route::delete('/admin/entries/{id}','EntryController@destroy');
+
     Route::get('/admin/settings','SettingController@companyInfo');//管理员资料
     Route::post('/admin/settings/{id}','SettingController@update');//系统用户信息修改
 });

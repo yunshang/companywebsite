@@ -102,7 +102,6 @@
                             <div id="container" name="body" type="text/plain" style="height:200px;">
                                 {!! old('body') !!}
                             </div>
-
                         </div>
 
                     </div>
