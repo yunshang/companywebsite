@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Auth;
+use App\Repositories\Admin\ArticleRepository;
+use App\Article;
+use Illuminate\Pagination\Paginator;
+
+
+
 
 class NewController extends Controller
 {
@@ -13,9 +19,10 @@ class NewController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    private $articles;
+    public function __construct(ArticleRepository $articles)
     {
-//        $this->middleware('auth');
+        $this->articles = $articles;
     }
 
     /**
@@ -31,8 +38,8 @@ class NewController extends Controller
     }
     public function newlist()
     {
-//        $user = User::find(2);
-//        dd(Auth::user());
-        return view('newlist');
+        $companyarticles = $this->articles->getcompanyArticles();
+        $industryarticles = $this->articles->getindustryArticles();
+        return view('newlist',compact(['companyarticles','industryarticles']));
     }
 }

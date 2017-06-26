@@ -2,44 +2,34 @@
 namespace App\Repositories\Admin;
 
 use App\Article;
-use App\Topic;
+use App\ArticleKind;
 
 class ArticleRepository
 {
-    //查找指定问题
     public function byId($id)
     {
         return Article::find($id);
     }
 
-    //拿到所有问题
     public function getArticlesFeed()
     {
         return Article::published()->latest('updated_at')->with('user')->get();
     }
 
-    //创建问题
     public function Article(array $attributes)
     {
         return Article::create($attributes);
     }
 
-    //更新问题的标签
-    public function normalizeTopics(array $topics)
+    public function getcompanyArticles()
     {
-        return collect($topics)->map(function ($topic) {
-            if (is_numeric($topic)) {
-                Topic::find($topic)->increment('questions_count');
-                return (int)$topic;
-            }
-            $newTopic = Topic::create(['name' => $topic, 'questions_count' => 1]);
-            return $newTopic->id;
-        })->toArray();
+        $articlekind = ArticleKind::where('name','公司新闻')->firstOrFail();
+        return $articlekind ->allarticles()->published()->latest('updated_at')->with('user')->paginate(1);
     }
 
-    //拿到问题的topics和答案
-    public function byIdWithTopicsAndAnswers($id)
+    public function getindustryArticles()
     {
-        return Article::where('id', $id)->with(['topics','answers'])->first();
+        $articlekind = ArticleKind::where('name','行业新闻')->firstOrFail();
+        return $articlekind ->allarticles()->published()->latest('updated_at')->with('user')->paginate(1);
     }
 }
