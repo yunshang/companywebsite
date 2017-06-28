@@ -22,7 +22,7 @@ Route::get('/joinus', 'JoinusController@index');
 Route::post('/joinus','JoinusController@store');
 Route::get('/subsidiary', 'SubsidiaryController@index');
 Route::get('/contactus', 'ContactusController@index');
-Route::get('/new', 'NewController@index');
+Route::get('/new/{id}', 'NewController@index');
 Route::get('/newlist', 'NewController@newlist');
 
 //邮件的验证

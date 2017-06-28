@@ -6,7 +6,7 @@
 
 <div class="cultre-banner main-banner">
     <div class="banner-title">
-        <img src="images/group/about_title.png">
+        <img src="/images/group/about_title.png">
     </div>
 </div>
 <div class="main-countent">
@@ -26,7 +26,7 @@
                     <div class="cultre-main">
                         <div class="tabs-main-changh main-qyjj">
                             <div class="main-left-pic fl">
-                                <img src="images/group/culture_main_pic1.jpg">
+                                <img src="/images/group/culture_main_pic1.jpg">
                             </div>
                             <div class="main-right-text fr">
                                 <div class="text-english">COMPANY <span class="text-english-color">PROFILE</span></div>
@@ -62,40 +62,40 @@
                         </div>
                         <div class="picScroll-left">
                             <div class="hd">
-                                <a class="hd-left fl" href="javascript:void(0)"><img src="images/group/cefiro/arrow-left.png" /></a>
-                                <a class="hd-right fr" href="javascript:void(0)"><img src="images/group/cefiro/arrow-right.png"/></a>
+                                <a class="hd-left fl" href="javascript:void(0)"><img src="/images/group/cefiro/arrow-left.png" /></a>
+                                <a class="hd-right fr" href="javascript:void(0)"><img src="/images/group/cefiro/arrow-right.png"/></a>
                             </div>
                             <div class="bd">
                                 <ul class="picList">
                                     <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/company1.jpg" /></a></div>
+                                        <div class="pic"><a href="#"><img src="/images/group/cefiro/company1.jpg" /></a></div>
                                     </li>
                                     <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/company3.jpg" /></a></div>
+                                        <div class="pic"><a href="#"><img src="/images/group/cefiro/company3.jpg" /></a></div>
                                     </li>
                                     <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/company4.jpg"/></a></div>
+                                        <div class="pic"><a href="#"><img src="/images/group/cefiro/company4.jpg"/></a></div>
                                     </li>
                                     <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/company5.jpg" /></a></div>
+                                        <div class="pic"><a href="#"><img src="/images/group/cefiro/company5.jpg" /></a></div>
                                     </li>
                                     <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/company6.jpg" /></a></div>
+                                        <div class="pic"><a href="#"><img src="/images/group/cefiro/company6.jpg" /></a></div>
                                     </li>
                                     <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/company7.jpg" /></a></div>
+                                        <div class="pic"><a href="#"><img src="/images/group/cefiro/company7.jpg" /></a></div>
                                     </li>
                                     <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/company8.jpg"/></a></div>
+                                        <div class="pic"><a href="#"><img src="/images/group/cefiro/company8.jpg"/></a></div>
                                     </li>
                                     <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/company9.jpg" /></a></div>
+                                        <div class="pic"><a href="#"><img src="/images/group/cefiro/company9.jpg" /></a></div>
                                     </li>
                                     <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/company10.jpg" /></a></div>
+                                        <div class="pic"><a href="#"><img src="/images/group/cefiro/company10.jpg" /></a></div>
                                     </li>
                                     <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/company11.jpg" /></a></div>
+                                        <div class="pic"><a href="#"><img src="/images/group/cefiro/company11.jpg" /></a></div>
                                     </li>
                                 </ul>
                             </div>
@@ -136,7 +136,7 @@
                     <div class="cultre-main">
                         <div class="tabs-main-changh main-hxjz">
                             <div class="main-left-pic fl">
-                                <img src="images/group/culture_main_pic.png">
+                                <img src="/images/group/culture_main_pic.png">
                             </div>
                             <div class="main-right-text fr">
                                 <div class="text-english">THE CORE <span class="text-english-color">VALUE</span></div>
@@ -177,7 +177,7 @@
                                 </div>
                             </div>
                             <div class="main-left-pic fr">
-                                <img src="images/group/culture_main_pic2.png">
+                                <img src="/images/group/culture_main_pic2.png">
                             </div>
                         </div>
                         <div class="tabs-main-changh main-chjs">
@@ -195,410 +195,26 @@
             <!--案例3-->
             <div class="product" id="sty">
                 <section>
+                    @foreach($enterprisestyles as $enterprisestyle)
                     <div class="cultre-qyfc">
-                        <h3>湖北大区团建<span>勇攀高峰，融合聚力，提升团队战斗力！</span></h3>
+                        <h3>{{$enterprisestyle->title}}<span>{{$enterprisestyle->subtitle}}</span></h3>
                         <div class="picScroll-left">
                             <div class="hd">
-                                <a class="hd-left fl" href="javascript:void(0)"><img src="images/group/cefiro/arrow-left.png" /></a>
-                                <a class="hd-right fr" href="javascript:void(0)"><img src="images/group/cefiro/arrow-right.png"/></a>
+                                <a class="hd-left fl" href="javascript:void(0)"><img src="/images/group/cefiro/arrow-left.png" /></a>
+                                <a class="hd-right fr" href="javascript:void(0)"><img src="/images/group/cefiro/arrow-right.png"/></a>
                             </div>
                             <div class="bd">
                                 <ul class="picList">
+                                    @foreach($enterprisestyle->getallimg() as $img)
                                     <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/hubei_pic1.png"/></a></div>
+                                        <div class="pic"><a href="#"><img src="{{$img->filepath}}" width="420px" height="280px"/></a></div>
                                     </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/hubei_pic2.png" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/hubei_pic3.png" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/hubei_pic4.png" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/hubei_pic5.png" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/hubei_pic6.png" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/hubei_pic7.png" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/hubei_pic8.png" /></a></div>
-                                    </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="cultre-qyfc">
-                        <h3>宁德福鼎业务员团建<span>徜徉于湖光山水之间，与大自然亲密接触。</span></h3>
-                        <div class="picScroll-left">
-                            <div class="hd">
-                                <a class="hd-left fl" href="javascript:void(0)"><img src="images/group/cefiro/arrow-left.png" /></a>
-                                <a class="hd-right fr" href="javascript:void(0)"><img src="images/group/cefiro/arrow-right.png"/></a>
-                            </div>
-                            <div class="bd">
-                                <ul class="picList">
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/fuding_pic1.png"/></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/fuding_pic2.png" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/fuding_pic3.png" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/fuding_pic4.png" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/fuding_pic5.png" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/fuding_pic6.png" /></a></div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cultre-qyfc">
-                        <h3>《从专业走向管理者》培训<span>一个企业给员工最大的福利就是培训。</span></h3>
-                        <div class="picScroll-left">
-                            <div class="hd">
-                                <a class="hd-left fl" href="javascript:void(0)"><img src="images/group/cefiro/arrow-left.png" /></a>
-                                <a class="hd-right fr" href="javascript:void(0)"><img src="images/group/cefiro/arrow-right.png"/></a>
-                            </div>
-                            <div class="bd">
-                                <ul class="picList">
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic.jpg"/></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic1.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic2.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic3.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic4.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic5.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic6.jpg"/></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic7.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic8.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic9.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic10.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic11.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic12.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic13.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic14.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic15.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic16.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/guanli_pic17.jpg" /></a></div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cultre-qyfc">
-                        <h3>第一季季度会议<span>人品立身、技能立业。撸袖实干，淡季不淡。</span></h3>
-                        <div class="picScroll-left">
-                            <div class="hd">
-                                <a class="hd-left fl" href="javascript:void(0)"><img src="images/group/cefiro/arrow-left.png" /></a>
-                                <a class="hd-right fr" href="javascript:void(0)"><img src="images/group/cefiro/arrow-right.png"/></a>
-                            </div>
-                            <div class="bd">
-                                <ul class="picList">
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic.jpg"/></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic1.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic2.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic3.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic4.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic5.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic6.jpg"/></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic7.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic8.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic9.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic10.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic11.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic12.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic13.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic14.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic15.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic16.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic17.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic18.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/huiyi_pic19.jpg" /></a></div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cultre-qyfc">
-                        <h3>新员工培训<span>为新员工注入了动力和信心，为以后的工作奠定了基础。</span></h3>
-                        <div class="picScroll-left">
-                            <div class="hd">
-                                <a class="hd-left fl" href="javascript:void(0)"><img src="images/group/cefiro/arrow-left.png" /></a>
-                                <a class="hd-right fr" href="javascript:void(0)"><img src="images/group/cefiro/arrow-right.png"/></a>
-                            </div>
-                            <div class="bd">
-                                <ul class="picList">
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic.jpg"/></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic1.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic2.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic3.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic4.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic5.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic6.jpg"/></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic7.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic8.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic9.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic10.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic11.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic12.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic13.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic14.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/peixun_pic15.jpg" /></a></div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cultre-qyfc">
-                        <h3>《时间管理》培训<span>时间管理本质就是管理自己，有效达到既定目标。</span></h3>
-                        <div class="picScroll-left">
-                            <div class="hd">
-                                <a class="hd-left fl" href="javascript:void(0)"><img src="images/group/cefiro/arrow-left.png" /></a>
-                                <a class="hd-right fr" href="javascript:void(0)"><img src="images/group/cefiro/arrow-right.png"/></a>
-                            </div>
-                            <div class="bd">
-                                <ul class="picList">
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic.jpg"/></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic1.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic2.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic3.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic4.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic5.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic6.jpg"/></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic7.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic8.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic9.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic10.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic11.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic12.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic13.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic14.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic15.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl_pic16.jpg" /></a></div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cultre-qyfc">
-                        <h3>《高效会议与多维思考》培训<span>发现会议常见问题与原因，进行有效沟通！</span></h3>
-                        <div class="picScroll-left">
-                            <div class="hd">
-                                <a class="hd-left fl" href="javascript:void(0)"><img src="images/group/cefiro/arrow-left.png" /></a>
-                                <a class="hd-right fr" href="javascript:void(0)"><img src="images/group/cefiro/arrow-right.png"/></a>
-                            </div>
-                            <div class="bd">
-                                <ul class="picList">
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl2_pic.jpg"/></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl2_pic1.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl2_pic2.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl2_pic3.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl2_pic4.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl2_pic5.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl2_pic6.jpg"/></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl2_pic7.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl2_pic8.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl2_pic9.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/sjgl2_pic10.jpg" /></a></div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cultre-qyfc">
-                        <h3>芜湖大区团队建设<span>团建一家亲，齐心协力，体现默契无间。</span></h3>
-                        <div class="picScroll-left">
-                            <div class="hd">
-                                <a class="hd-left fl" href="javascript:void(0)"><img src="images/group/cefiro/arrow-left.png" /></a>
-                                <a class="hd-right fr" href="javascript:void(0)"><img src="images/group/cefiro/arrow-right.png"/></a>
-                            </div>
-                            <div class="bd">
-                                <ul class="picList">
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/wuhutj_pic.jpg"/></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/wuhutj_pic1.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/wuhutj_pic2.jpg" /></a></div>
-                                    </li>
-                                    <li>
-                                        <div class="pic"><a href="#"><img src="images/group/cefiro/wuhutj_pic1.jpg" /></a></div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </section>
             </div>
         </div>

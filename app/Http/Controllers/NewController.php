@@ -30,16 +30,17 @@ class NewController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-//        $user = User::find(2);
-//        dd(Auth::user());
-        return view('new');
+        $article = $this->articles->byId($id);
+        $nextarticle = $this->articles->findnextartice($id);
+        return view('new',compact(['article','nextarticle']));
     }
-    public function newlist()
+
+    public function newlist(Request $request)
     {
-        $companyarticles = $this->articles->getcompanyArticles();
-        $industryarticles = $this->articles->getindustryArticles();
-        return view('newlist',compact(['companyarticles','industryarticles']));
+        $filter = $request->get('filter');
+        $articles = $this->articles->filterArticles($filter);
+        return view('newlist',compact('articles'));
     }
 }

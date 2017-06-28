@@ -92,36 +92,20 @@
 </div>
 <div class="group-content-box">
     <ul class="group-news-ul">
+       @foreach($articles as $article)
         <li>
             <div class="group-news-sbox-img">
-                <img src="images/group/news_pic11.jpg">
+                <img src="{{$article->cover}}" width="400px" height="306px">
             </div>
-            <h4>【新血液 新力量】2017年长和控股第一期学员培训开启！</h4>
-            <p>为了帮助新员工尽快了解公司、转变角色、融入长和大家庭，2017年4月15日，公司开展了“2017年长和控股第一期新员工培训”，共有135名新员工参加了此次培训。课程内容……</p>
-            <a href="news-detail3.html" class="group-lock-more">
+            <h4>{{$article->title}}</h4>
+            <p>
+               {!! str_limit($article->body,300,'</p>') !!}
+            </p>
+            <a href="/new/{{$article->id}}" class="group-lock-more">
                 +查看详情
             </a>
         </li>
-        <li>
-            <div class="group-news-sbox-img">
-                <img src="images/group/news-pic1.jpg">
-            </div>
-            <h4>长和控股2017年第一季度经营会议圆满落幕！</h4>
-            <p>4月22日，长和控股在杭州总部会议室召开了2017年第一季度经营会议，本次会议围绕“人品立身、技能立业”展开，会议由长和控股副总裁葛益钦先生主持，各部门负责人和骨干成员及集团核心……</p>
-            <a href="news-detail.html"  class="group-lock-more">
-                +查看详情
-            </a>
-        </li>
-        <li>
-            <div class="group-news-sbox-img">
-                <img src="images/group/news_pic19.jpg">
-            </div>
-            <h4>【从专业人才到管理高手】“银天鹅”第二期培训有啥亮点？</h4>
-            <p>为了满足学员们的需求，“银天鹅”计划第二期培训开课啦！本期课程由知名讲师郭维骐主讲，通过两天的培训学习，长和控股中层干部们学习了如何提升执行力、加强沟通、目标管理以及有效激励员工等方面的管理……</p>
-            <a href="news-detail2.html"  class="group-lock-more">
-                +查看详情
-            </a>
-        </li>
+        @endforeach
     </ul>
 
 </div>

@@ -6,7 +6,7 @@ $(document).ready(function () {
         var footerlog=$(".footer-content-main-logo img");
         switch (id) {
             case "automobile":
-                footerlog.attr("src", "images/automobile/foot_logo.png");
+                footerlog.attr("src", "/images/automobile/foot_logo.png");
                 break;
             default:
                 break;
@@ -45,10 +45,6 @@ $(document).ready(function () {
     });
     $('.application-img').click(function(){
         $('.online-application-bj').css('display','none');
-    });
-    $('.application-submit').click(function(){
-        $('.online-application-bj').css('display','none');
-        alert("提交成功");
     });
 
 

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Repositories\ResumeRepository;
+use App\Repositories\Admin\PositionRepository;
+use App\Repositories\Admin\EntryRepository;
 use App\User;
 use Storage;
 use Illuminate\Http\Request;
@@ -16,10 +18,14 @@ class JoinusController extends Controller
      * @return void
      */
     protected $resume;
+    protected $position;
+    protected $entry;
 
-    public function __construct(ResumeRepository $resume)
+    public function __construct(ResumeRepository $resume, PositionRepository $position, EntryRepository $entry)
     {
         $this->resume = $resume;
+        $this->position = $position;
+        $this->entry = $entry;
     }
 
     /**
@@ -29,9 +35,9 @@ class JoinusController extends Controller
      */
     public function index()
     {
-//        $user = User::find(2);
-//        dd(Auth::user());
-        return view('joinus');
+        $positions = $this->position->getAllPositions();
+        $entries = $this->entry->getAllEntries();
+        return view('joinus', compact(['positions','entries']));
     }
 
     public function store(Request $request)

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Auth;
+use App\Repositories\Admin\SettingRepository;
 
 class ContactusController extends Controller
 {
@@ -13,9 +14,11 @@ class ContactusController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    private $setting;
+    public function __construct(SettingRepository $setting)
     {
-//        $this->middleware('auth');
+        $this->setting = $setting;
+
     }
 
     /**
@@ -25,8 +28,7 @@ class ContactusController extends Controller
      */
     public function index()
     {
-//        $user = User::find(2);
-//        dd(Auth::user());
-        return view('contactus');
+        $setting =  $this->setting->getsettinginfo();
+        return view('contactus',compact('setting'));
     }
 }

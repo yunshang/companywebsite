@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Auth;
+use App\Repositories\Admin\ArticleRepository;
+use App\Article;
 
 class GroupController extends Controller
 {
@@ -13,20 +15,15 @@ class GroupController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    private $article;
+    public function __construct(ArticleRepository $article)
     {
-//        $this->middleware('auth');
+        $this->article = $article;
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-//        $user = User::find(2);
-//        dd(Auth::user());
-        return view('group');
+        $articles = $this->article->getlastArticles();
+        return view('group',compact('articles'));
     }
 }

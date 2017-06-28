@@ -15,17 +15,16 @@
     <div class="main-content-contact ">
         <ul>
             <li>
-                <span><img src="images/group/contact_us_icon1.png"></span>
-                <p>浙江省杭州市拱墅区祥园路108号</p>
-                <p>中国智慧信息产业园G座3楼、11楼</p>
+                <span><img src="/images/group/contact_us_icon1.png"></span>
+                <p>{{$setting->company_address}}</p>
             </li>
             <li>
-                <span><img src="images/group/contact_us_icon2.png"></span>
-                <p>0571-88073031</p>
+                <span><img src="/images/group/contact_us_icon2.png"></span>
+                <p>{{$setting->company_phone}}</p>
             </li>
             <li>
-                <span><img src="images/group/contact_us_icon3.png"></span>
-                <p>chhr@cholding.com.cn</p>
+                <span><img src="/images/group/contact_us_icon3.png"></span>
+                <p>{{$setting->company_email}}</p>
             </li>
         </ul>
     </div>

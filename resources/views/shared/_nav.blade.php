@@ -1,10 +1,10 @@
 <div class="header wearp-main">
     <div class="header-logo fl" style="margin-top: 10px;">
-        <a href="index.html"> <img src="images/group/changh_logo.png"></a>
+        <a href="index.html"> <img src="/images/group/changh_logo.png"></a>
     </div>
     <div class="header-nav fr">
         <ul>
-            <a href="group.html">
+            <a href="/group">
                 <li class="fl">
                     <div class="header-nav-content">
                         <p>首页</p>
@@ -12,7 +12,7 @@
                     </div>
                 </li>
             </a>
-            <a href="culture.html">
+            <a href="/culture">
                 <li class="fl">
                     <div class="header-nav-content">
                         <p>走进长和</p>
@@ -34,7 +34,7 @@
                     </ul>
                 </li>
             </a>
-            <a href="news-list.html">
+            <a href="/newlist">
                 <li class="fl">
                     <div class="header-nav-content">
                         <p>新闻中心</p>
@@ -52,7 +52,7 @@
                     </ul>
                 </li>
             </a>
-            <a href="subsidiary.html">
+            <a href="/subsidiary">
                 <li class="fl">
                     <div class="header-nav-content">
                         <p>子公司</p>
@@ -62,7 +62,7 @@
                     </div>
                 </li>
             </a>
-            <a href="join-us.html">
+            <a href="/joinus">
                 <li class="fl">
                     <div class="header-nav-content">
                         <p>人才招聘</p>
@@ -83,7 +83,7 @@
                     </ul>
                 </li>
             </a>
-            <a href="contact-us.html">
+            <a href="/contactus">
                 <li class="fl">
                     <div class="header-nav-content">
                         <p>联系我们</p>

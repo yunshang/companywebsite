@@ -16,13 +16,6 @@ class Article extends Model
         return $this->is_hidden === 'T';
     }
 
-    //帖子---话题
-//    public function topics()
-//    {
-//        return $this->belongsToMany(Topic::class)->withTimestamps();
-//    }
-
-    //帖子---用户
     public function user()
     {
         return $this->belongsTo(User::class);

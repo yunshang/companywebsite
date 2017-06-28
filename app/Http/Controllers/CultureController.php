@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Auth;
+use App\Repositories\Admin\EnterpriseStyleRepository;
 
 class CultureController extends Controller
 {
@@ -13,9 +14,11 @@ class CultureController extends Controller
      *
      * @return void
      */
-    public function __construct()
+
+    private $enterprisestyle;
+    public function __construct(EnterpriseStyleRepository $enterprisestyle)
     {
-//        $this->middleware('auth');
+        $this->enterprisestyle = $enterprisestyle;
     }
 
     /**
@@ -25,8 +28,7 @@ class CultureController extends Controller
      */
     public function index()
     {
-//        $user = User::find(2);
-//        dd(Auth::user());
-        return view('culture');
+        $enterprisestyles = $this->enterprisestyle->getAllEnteriseStyles();
+        return view('culture',compact('enterprisestyles'));
     }
 }

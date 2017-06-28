@@ -12,12 +12,12 @@
         <img src="images/group/news_title.png">
     </div>
 </div>
-<div class="main-countent">
+<div class="main-countent" id="aaa">
     <div class="main-countent-nav ">
         <div class="title cf">
             <ul class="title-list fl cf ">
-                <li class="on">公司新闻</li>
-                <li>行业新闻</li>
+                <a href="/newlist?filter=company"><li class="on">公司新闻</li></a>
+                <a href="/newlist?filter=industry"><li>行业新闻</li></a>
                 <p><b></b></p>
             </ul>
         </div>
@@ -28,10 +28,10 @@
                     <div class="tabs-main">
                         <div class="tabs-main-changh main-news">
                             <ul>
-                                @foreach($companyarticles as $article)
+                                @foreach($articles as $article)
                                 <li>
                                     <div class="main-news-left fl">
-                                        <a href="news-detail3.html"><img src="{{$article->cover}}" width="60%"></a>
+                                        <a href="/new/1"><img src="{{$article->cover}}" width="60%"></a>
                                     </div>
                                     <div class="main-news-right fr">
                                         <div class="main-news-right-date" style=" -webkit-box-sizing: initial;">
@@ -39,38 +39,12 @@
                                             <span>{{$article->created_at->format('Y.m')}}</span>
                                         </div>
                                         <h3>{{$article->title}}</h3>
-                                        {!! str_limit($article->body,'2000') !!}
-                                        <a href="news-detail3.html" class="lock-more">查看详情 ></a>
+                                        {!! str_limit($article->body,500,'"></p>') !!}
+                                    <a href='/new/{{$article->id}}' class="lock-more">查看详情 ></a>
                                     </div>
                                 </li>
                                 @endforeach
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="product">
-                <section>
-                    <div class="tabs-main">
-                        <div class="tabs-main-changh main-news">
-                            <ul>
-                                @foreach($industryarticles as $article)
-                                <li>
-                                    <div class="main-news-left fl">
-                                        <a href="news-detail3.html"><img src="{{$article->cover}}" width="60%"></a>
-                                    </div>
-                                    <div class="main-news-right fr">
-                                        <div class="main-news-right-date" style=" -webkit-box-sizing:initial;">
-                                            <span>{{$article->created_at->format('d')}}</span>
-                                            <span>{{$article->created_at->format('Y.m')}}</span>
-                                        </div>
-                                        <h3>{{$article->title}}</h3>
-                                        {!! str_limit($article->body,'2000') !!}
-                                        <a href="news-detail3.html" class="lock-more">查看详情 ></a>
-                                    </div>
-                                </li>
-                                @endforeach
-                                {{$industryarticles->links()}}
+                                {{$articles->links()}}
                             </ul>
                         </div>
                     </div>
