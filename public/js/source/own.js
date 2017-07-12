@@ -2,16 +2,16 @@ $(document).ready(function () {
     /***************************top foot  调用*/
     var id = $(".header").attr("id");
 
-    $(".footer").load("base/foot-group.html",null,function(){
-        var footerlog=$(".footer-content-main-logo img");
-        switch (id) {
-            case "automobile":
-                footerlog.attr("src", "/images/automobile/foot_logo.png");
-                break;
-            default:
-                break;
-        }
-    });
+    // $(".footer").load("base/foot-group.html",null,function(){
+    //     var footerlog=$(".footer-content-main-logo img");
+    //     switch (id) {
+    //         case "automobile":
+    //             footerlog.attr("src", "/images/automobile/foot_logo.png");
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // });
 /***************************tab 切换*****************************/
     $('.title-list li').click(function(){
         var liindex = $('.title-list li').index(this);

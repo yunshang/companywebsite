@@ -16,8 +16,8 @@
     <div class="main-countent-nav ">
         <div class="title cf">
             <ul class="title-list fl cf ">
-                <a href="/newlist?filter=company"><li class="on">公司新闻</li></a>
-                <a href="/newlist?filter=industry"><li>行业新闻</li></a>
+                <a href="/newlist?filter=company"><li class="{{$filter == 'company' ? 'on' : ''}}">公司新闻</li></a>
+                <a href="/newlist?filter=industry"><li class="{{$filter == 'industry' ? 'on' : ''}}">行业新闻</li></a>
                 <p><b></b></p>
             </ul>
         </div>

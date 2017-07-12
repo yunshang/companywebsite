@@ -18,7 +18,6 @@ class ContactusController extends Controller
     public function __construct(SettingRepository $setting)
     {
         $this->setting = $setting;
-
     }
 
     /**
@@ -28,7 +27,7 @@ class ContactusController extends Controller
      */
     public function index()
     {
-        $setting =  $this->setting->getsettinginfo();
+        $setting =  parent::getsetting($this->setting);
         return view('contactus',compact('setting'));
     }
 }

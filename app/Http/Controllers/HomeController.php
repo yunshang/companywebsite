@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Auth;
+use App\Repositories\Admin\SettingRepository;
 
 class HomeController extends Controller
 {
@@ -13,8 +14,10 @@ class HomeController extends Controller
      *
      * @return void
      */
+    protected $setting;
     public function __construct()
     {
+        $this->setting = $setting;
 //        $this->middleware('auth');
     }
 
@@ -27,6 +30,7 @@ class HomeController extends Controller
     {
 //        $user = User::find(2);
 //        dd(Auth::user());
-        return view('home');
+        $setting = parent::getsetting($this->setting);
+        return view('home',compact(['setting']));
     }
 }

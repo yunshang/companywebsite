@@ -65,17 +65,17 @@
                 </section>
             </div>
             <!--员工福利-->
-            @foreach($entries as $entry)
+
             <div class="product">
                 <section>
                     <div class="cultre-main">
                         <div class="cultre-main-text">
-                            {!! $entry->content !!}
+                            {!! $entries[0]->content !!}
                         </div>
                         <!-- 代码 开始 -->
                         <div id="fsD2" class="focus">
                             <div id="D1pic2" class="fPic">
-                                @foreach($entry->getallimg() as $img)
+                                @foreach($entries[0]->getallimg() as $img)
                                 <div class="fcon">
                                     <a><img src="{{$img->filepath}}"></a>
                                     <span class="shadow"><a>{{$img->description}}</a></span>
@@ -104,7 +104,48 @@
                     </div>
                 </section>
             </div>
-        @endforeach
+
+            <div class="product">
+                <section>
+                    <div class="cultre-main">
+                        <div class="cultre-main-text">
+                            {!! $entries[1]->content !!}
+                        </div>
+                        <!-- 代码 开始 -->
+                        <div id="fsD1" class="focus">
+                            <div id="D1pic1" class="fPic">
+                                @foreach($entries[1]->getallimg() as $img)
+                                <div class="fcon">
+                                    <a><img src="{{$img->filepath}}"></a>
+                                    <span class="shadow"><a>{{$img->description}}</a></span>
+                                </div>
+                                @endforeach
+                            </div>
+                            <div class="fbg">
+                                <div class="D1fBt" id="D1fBt">
+                                    <a href="javascript:void(0)" hidefocus="true" target="_self" class="current"><i>1</i></a>
+                                    <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>2</i></a>
+                                    <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>3</i></a>
+                                    <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>4</i></a>
+                                    <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>5</i></a>
+                                    <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>6</i></a>
+                                    <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>7</i></a>
+                                    <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>8</i></a>
+                                    <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>9</i></a>
+                                    <a href="javascript:void(0)" hidefocus="true" target="_self" class=""><i>10</i></a>
+
+                                </div>
+                            </div>
+                            <span class="prev"></span>
+                            <span class="next"></span>
+                        </div>
+                        <!-- 代码 结束 -->
+                    </div>
+                </section>
+            </div>
+
+
+
         </div>
     </div>
 </div>
@@ -168,3 +209,42 @@
     </form>
     <a href="#0" class="cd-top">Top</a>
 @endsection
+@yield('js')
+<script src="{{url('/js/source/koala.min.1.5.js')}}"></script>
+<script src="{{url('/js/source/terminator2.2.min.js')}}"></script>
+<script type="text/javascript">
+    Qfast.add('widgets', { path: "/js/source/terminator2.2.min.js", type: "js", requires: ['fx'] });
+    Qfast(false, 'widgets', function () {
+        K.tabs({
+            id: 'fsD2',   //焦点图包裹id
+            conId: "D1pic2",  //** 大图域包裹id
+            tabId:"D2fBt",
+            tabTn:"a",
+            conCn: '.fcon', //** 大图域配置class
+            auto: 1,   //自动播放 1或0
+            effect: 'fade',   //效果配置
+            eType: 'click', //** 鼠标事件
+            pageBt:true,//是否有按钮切换页码
+            bns: ['.prev', '.next'],//** 前后按钮配置class
+            interval: 3000  //** 停顿时间
+        })
+    })
+</script>
+<script type="text/javascript">
+    Qfast.add('widgets', { path: "/js/source/terminator2.2.min.js", type: "js", requires: ['fx'] });
+    Qfast(false, 'widgets', function () {
+        K.tabs({
+            id: 'fsD1',   //焦点图包裹id
+            conId: "D1pic1",  //** 大图域包裹id
+            tabId:"D1fBt",
+            tabTn:"a",
+            conCn: '.fcon', //** 大图域配置class
+            auto: 1,   //自动播放 1或0
+            effect: 'fade',   //效果配置
+            eType: 'click', //** 鼠标事件
+            pageBt:true,//是否有按钮切换页码
+            bns: ['.prev', '.next'],//** 前后按钮配置class
+            interval: 3000  //** 停顿时间
+        })
+    })
+</script>

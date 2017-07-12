@@ -5,16 +5,17 @@ namespace App\Http\Controllers;
 use App\Message;
 use App\Notifications\NewMessageNotification;
 use App\Repositories\MessageRepository;
+use App\Repositories\Admin\SettingRepository;
 use Auth;
 use Illuminate\Http\Request;
 
 class InboxController extends Controller
 {
     protected $message;
-
-
-    public function __construct(MessageRepository $message)
+    protected $setting;
+    public function __construct(MessageRepository $message, SettingRepository $setting)
     {
+        $this->setting = $setting;
         $this->middleware('auth');
         $this->message = $message;
     }
@@ -22,6 +23,7 @@ class InboxController extends Controller
     //私信列表
     public function index()
     {
+        $setting = parent::getsetting($this->setting);
         $messages = Message::where('to_user_id',user()->id)
             ->orWhere('from_user_id',user()->id)
             ->with(['fromUser','toUser'])->latest()->get();

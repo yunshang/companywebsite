@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ChangePasswordRequest;
 use Illuminate\Http\Request;
+use App\Repositories\Admin\SettingRepository;
 use Hash;
 
 class PasswordController extends Controller

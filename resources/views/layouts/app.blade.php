@@ -154,10 +154,6 @@
 
 @yield('js')
 
-<script>
-    $('#flash-overlay-modal').modal();
-</script>
-
 <script type="text/javascript">
     $(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:3,trigger:"click"});
 </script>
@@ -198,43 +194,35 @@ $('li').mouseleave(function(){
 })
 </script>
 
-<script type="text/javascript">
-    Qfast.add('widgets', { path: "/js/source/terminator2.2.min.js", type: "js", requires: ['fx'] });
-    Qfast(false, 'widgets', function () {
-        K.tabs({
-            id: 'fsD2',   //焦点图包裹id
-            conId: "D1pic2",  //** 大图域包裹id
-            tabId:"D2fBt",
-            tabTn:"a",
-            conCn: '.fcon', //** 大图域配置class
-            auto: 1,   //自动播放 1或0
-            effect: 'fade',   //效果配置
-            eType: 'click', //** 鼠标事件
-            pageBt:true,//是否有按钮切换页码
-            bns: ['.prev', '.next'],//** 前后按钮配置class
-            interval: 3000  //** 停顿时间
-        })
-    })
-</script>
-<script type="text/javascript">
-    Qfast.add('widgets', { path: "/js/source/terminator2.2.min.js", type: "js", requires: ['fx'] });
-    Qfast(false, 'widgets', function () {
-        K.tabs({
-            id: 'fsD1',   //焦点图包裹id
-            conId: "D1pic2",  //** 大图域包裹id
-            tabId:"D2fBt",
-            tabTn:"a",
-            conCn: '.fcon', //** 大图域配置class
-            auto: 1,   //自动播放 1或0
-            effect: 'fade',   //效果配置
-            eType: 'click', //** 鼠标事件
-            pageBt:true,//是否有按钮切换页码
-            bns: ['.prev', '.next'],//** 前后按钮配置class
-            interval: 3000  //** 停顿时间
-        })
-    })
-</script>
-<div class="footer "></div>
+<div class="footer ">
+    <div class="footer-content wearp-main">
+        <div class="footer-content-main">
+            <div class="footer-content-main-logo">
+                <a href="index.html" target="_blank"> <img src="/images/group/foot_logo.png"></a>
+            </div>
+            <div class="footer-content-main-copyright">
+                <p>
+                    <span class="fl">地址：{{$setting->company_address}}}　　</span>
+                    <span class="fl">联系电话：{{$setting->company_phone}}</span>
+                </p>
+                <p>
+
+                    <span class="fl" style="margin-right: 40px;">邮箱：{{$setting->company_email}}</span>
+                    <span class="fl">
+                        版权所有：Copyright © 长和控股 All Rights Reserved 浙ICP备16033453号
+                    </span>
+                </p>
+            </div>
+            <div class="footer-content-main-code">
+                <img src="/images/automobile/foot_dingyh.png">
+                <p>订阅号</p>
+            </div>
+            <div class="footer-content-main-code">
+                <img src="/images/automobile/foot_guanw.png">
+                <p>官方微博</p>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 </html>

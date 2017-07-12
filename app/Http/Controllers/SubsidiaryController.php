@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use App\Repositories\Admin\SettingRepository;
 use Auth;
 
 class SubsidiaryController extends Controller
@@ -13,9 +14,11 @@ class SubsidiaryController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    protected $setting;
+    public function __construct(SettingRepository $setting)
     {
 //        $this->middleware('auth');
+        $this->setting = $setting;
     }
 
     /**
@@ -27,6 +30,7 @@ class SubsidiaryController extends Controller
     {
 //        $user = User::find(2);
 //        dd(Auth::user());
-        return view('subsidiary');
+        $setting = parent::getsetting($this->setting);
+        return view('subsidiary',compact('setting'));
     }
 }

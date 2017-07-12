@@ -9,5 +9,14 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    use AuthorizesRequests, DispatchesJobs,ValidatesRequests;
+
+    private $setting;
+
+    public function getsetting($setting)
+    {
+        $this->setting = $setting;
+        $setting =  $this->setting->getsettinginfo();
+        return $setting;
+    }
 }
