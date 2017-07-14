@@ -15,7 +15,7 @@ class HomeController extends Controller
      * @return void
      */
     protected $setting;
-    public function __construct()
+    public function __construct(SettingRepository $setting)
     {
         $this->setting = $setting;
 //        $this->middleware('auth');

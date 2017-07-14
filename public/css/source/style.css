@@ -334,32 +334,38 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
 .header-nav>ul{
     height:100px;
 }
-.header-nav>ul>a{
+.header-nav>ul>div{
     height: 100%;
     display: block;
     float: left;
 }
-.header-nav>ul>a>li{
+.header-nav>ul>div>li{
     height: 101px;
     padding: 0 20px;
     position: relative;
 }
-.header-nav>ul>a>li{
+.header-nav>ul>div>li{
     display: block;
 }
 
-.header-nav>ul>a>li:hover{
+.header-nav>ul>div>a:hover{
     cursor: pointer;
     background-color: #8d2123;
     /*color: #fff;*/
 }
-.header-nav>ul>a>li:hover>.header-nav-content>p{
+
+.header-nav>ul>div>li:hover{
+    cursor: pointer;
+    background-color: #8d2123;
+    /*color: #fff;*/
+}
+.header-nav>ul>div>li:hover>.header-nav-content>p{
     color: #fff;
 }
-.header-nav>ul>a>li:hover>ul{
+.header-nav>ul>div>li:hover>ul{
     display: block;
 }
-.header-nav>ul>a>li>ul{
+.header-nav>ul>div>li>ul{
     width: 100%;
     display: none;
     position: absolute;
@@ -370,7 +376,7 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
     opacity: 0.8;
     filter:alpha(opacity=80);
 }
-.header-nav>ul>a>li>ul>li{
+.header-nav>ul>div>li>ul>li{
     width: 100%;
     height: 50px;
     float: left;
@@ -379,7 +385,7 @@ a img,fieldset,iframe,img{border-width:0;border-style:none}
     line-height: 50px;
     font-size: 14px;
 }
-.header-nav>ul>a>li>ul>li:hover{
+.header-nav>ul>div>li>ul>li:hover{
     color: #fff;
     background: #8d2123;
 }

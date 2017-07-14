@@ -45,7 +45,15 @@ class NewController extends Controller
     {
         $setting = parent::getsetting($this->setting);
         $filter = $request->get('filter');
-        $articles = $this->articles->filterArticles($filter);
+        $articles = $this->articles->filterArticles("company");
         return view('newlist',compact(['articles','setting','filter']));
+    }
+
+    public function industrylist(Request $request)
+    {
+        $setting = parent::getsetting($this->setting);
+        $filter = $request->get('filter');
+        $articles = $this->articles->filterArticles("industry");
+        return view('industrylist',compact(['articles','setting']));
     }
 }

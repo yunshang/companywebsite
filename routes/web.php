@@ -24,6 +24,7 @@ Route::get('/subsidiary', 'SubsidiaryController@index');
 Route::get('/contactus', 'ContactusController@index');
 Route::get('/new/{id}', 'NewController@index');
 Route::get('/newlist', 'NewController@newlist');
+Route::get('/newlist/industry', 'NewController@industrylist');
 
 //邮件的验证
 Route::get('/email/verify/{token}',['as'=>'email.verify','uses'=>'EmailController@verify']);

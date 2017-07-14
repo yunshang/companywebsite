@@ -1,98 +1,126 @@
 <div class="header wearp-main">
     <div class="header-logo fl" style="margin-top: 10px;">
-        <a href="index.html"> <img src="/images/group/changh_logo.png"></a>
+        <a href="/index"> <img src="/images/group/changh_logo.png"></a>
     </div>
     <div class="header-nav fr">
         <ul>
-            <a href="/group">
+            <div>
                 <li class="fl">
                     <div class="header-nav-content">
-                        <p>首页</p>
-                        <p class="ywfont">Home</p>
+                        <a href="/group" style="color:#333">
+                            <p>首页</p>
+                            <p class="ywfont">Home</p>
+                        </a>
                     </div>
                 </li>
-            </a>
-            <a href="/culture">
+            </div>
+            <div>
                 <li class="fl">
                     <div class="header-nav-content">
-                        <p>走进长和</p>
-                        <p class="ywfont">About Changhe</p>
+                        <a href="/culture" style="color:#333">
+                            <p>走进长和</p>
+                            <p class="ywfont">About Changhe</p>
+                        </a>
                         <div class="triangle">
                         </div>
                     </div>
 
                     <ul>
                         <li>
-                            <p>企业简介</p>
+                        <a href="/culture" style="color:#333">
+                                <p>企业简介</p>
+                            </a>
                         </li>
                         <li>
-                            <p>企业文化</p>
+                        <a href="/culture" style="color:#333">
+                                <p>企业文化</p>
+                            </a>
                         </li>
                         <li>
-                            <p>企业风采</p>
+                        <a href="/culture" style="color:#333">
+                                <p>企业风采</p>
+                            </a>
                         </li>
                     </ul>
                 </li>
-            </a>
-            <a href="/newlist">
+            </div>
+            <div>
                 <li class="fl">
                     <div class="header-nav-content">
-                        <p>新闻中心</p>
-                        <p class="ywfont">News Center</p>
+                        <a href="/newlist" style="color:#333">
+                            <p>新闻中心</p>
+                            <p class="ywfont">News Center</p>
+                        </a>
                         <div class="triangle">
                         </div>
                     </div>
                     <ul>
                         <li>
-                            <p>公司新闻</p>
+                            <a href="/newlist#aaa" style="color:#333">
+                                <p>公司新闻</p>
+                            </a>
                         </li>
                         <li>
-                            <p>行业新闻</p>
+                            <a href="/newlist/industry#aaa" style="color:#333">
+                                <p>行业新闻</p>
+                            </a>
                         </li>
                     </ul>
                 </li>
-            </a>
-            <a href="/subsidiary">
+            </div>
+            <div>
                 <li class="fl">
                     <div class="header-nav-content">
-                        <p>子公司</p>
-                        <p class="ywfont">Subsidiary</p>
+                        <a href="/subsidiary" style="color:#333">
+                            <p>子公司</p>
+                            <p class="ywfont">Subsidiary</p>
+                        </a>
                         <div class="triangle">
                         </div>
                     </div>
                 </li>
-            </a>
-            <a href="/joinus">
+            </div>
+            <div>
                 <li class="fl">
                     <div class="header-nav-content">
-                        <p>人才招聘</p>
-                        <p class="ywfont">Talent Center</p>
+                        <a href="/joinus" style="color:#333">
+                            <p>人才招聘</p>
+                            <p class="ywfont">Talent Center</p>
+                        </a>
                         <div class="triangle">
                         </div>
                     </div>
                     <ul>
                         <li>
-                            <p>招聘信息</p>
+                            <a href="/joinus" style="color:#333">
+                                <p>招聘信息</p>
+                            </a>
                         </li>
                         <li>
-                            <p>员工福利</p>
+                            <a href="/joinus" style="color:#333">
+                                <p>员工福利</p>
+                            </a>
                         </li>
                         <li>
-                            <p>员工培训</p>
+                            <a href="/joinus" style="color:#333">
+                                <p>员工培训</p>
+                            </a>
                         </li>
                     </ul>
                 </li>
-            </a>
-            <a href="/contactus">
+            </div>
+            <div>
                 <li class="fl">
                     <div class="header-nav-content">
-                        <p>联系我们</p>
-                        <p class="ywfont">Contact us</p>
+                        <a href="/contactus" style="color:#333">
+                            <p>联系我们</p>
+                            <p class="ywfont">Contact us</p>
+                        </a>
                         <div class="triangle">
                         </div>
                     </div>
                 </li>
-            </a>
+            </div>
         </ul>
     </div>
 </div>

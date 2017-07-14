@@ -13,7 +13,7 @@ $(document).ready(function () {
     //     }
     // });
 /***************************tab 切换*****************************/
-    $('.title-list li').click(function(){
+    $('ul.cf li').click(function(){
         var liindex = $('.title-list li').index(this);
         $(this).addClass('on').siblings().removeClass('on');
         $('.product-wrap div.product').eq(liindex).fadeIn(150).siblings('div.product').hide();

@@ -16,9 +16,9 @@
     <div class="main-countent-nav ">
         <div class="title cf">
             <ul class="title-list fl">
-                <a href="/newlist#aaa" style="color:#333"><li class="on">公司新闻</li></a>
-                <a href="/newlist/industry#aaa" style="color:#333"><li class="">行业新闻</li></a>
-                <p><b></b></p>
+                <a href="/newlist" style="color:#333"><li class="">公司新闻</li></a>
+                <a href="/newlist/industry" style="color:#333"><li class="on">行业新闻</li></a>
+                <p style="left:146px"><b></b></p>
             </ul>
         </div>
         <div class="product-wrap">
