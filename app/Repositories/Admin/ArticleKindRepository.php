@@ -17,4 +17,9 @@ class ArticleKindRepository
         return ArticleKind::create($attributes);
     }
 
+    public function getArticlesKindFeed()
+    {
+        return ArticleKind::latest('updated_at')->get();
+    }
+
 }

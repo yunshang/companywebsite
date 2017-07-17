@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@include('shared._nav')
-
 @section('content')
+
+@include('shared._nav')
 
 <div class="subsidiary-banner main-banner">
     <div class="banner-title">

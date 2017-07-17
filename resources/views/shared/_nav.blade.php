@@ -1,6 +1,6 @@
 <div class="header wearp-main">
     <div class="header-logo fl" style="margin-top: 10px;">
-        <a href="/index"> <img src="/images/group/changh_logo.png"></a>
+        <a href="/home"> <img src="/images/group/changh_logo.png"></a>
     </div>
     <div class="header-nav fr">
         <ul>

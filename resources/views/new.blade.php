@@ -3,7 +3,6 @@
 @section('content')
 
 @include('shared._nav')
-
 <div class="news-banner main-banner">
     <div class="banner-title">
         <img src="/images/group/news_title.png">

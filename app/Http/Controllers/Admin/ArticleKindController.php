@@ -19,7 +19,7 @@ class ArticleKindController extends Controller
     }
     public function index()
     {
-        $articlekinds = $this->articlekind->getArticlesFeed();
+        $articlekinds = $this->articlekind->getArticlesKindFeed();
         if(user()->hasRole('admin') || user()->hasRole('admin-one')){
             return view('admin.articlekinds.index',compact('articlekinds'));
         }

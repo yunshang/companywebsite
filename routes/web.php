@@ -49,8 +49,8 @@ Route::group(['namespace' => 'Admin'], function () {
 
     Route::get('/admin/articlekind/index','ArticleKindController@index')->name('admin.articlekind');
     Route::get('/admin/articlekind/create','ArticleKindController@create');//创建问题
-    Route::post('/admin/articlekind','ArticlekindController@store');
-    Route::get('/admin/articlekind/edit/{id}','ArticlekindController@edit');
+    Route::post('/admin/articlekind','ArticleKindController@store');
+    Route::get('/admin/articlekind/edit/{id}','ArticleKindController@edit');
     Route::patch('/admin/articlekind/{id}','ArticleKindController@update');//编辑问题
     Route::delete('/admin/articlekind/{id}','ArticleKindController@destroy');//删除问题
 

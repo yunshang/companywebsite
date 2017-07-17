@@ -3,6 +3,7 @@
 @section('content')
 
 @include('shared._nav')
+
 <div class="contact-banner">
     <div class="banner-title">
         <img src="images/group/contact_us_title.png">
