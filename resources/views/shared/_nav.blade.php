@@ -17,7 +17,7 @@
             <div>
                 <li class="fl">
                     <div class="header-nav-content">
-                        <a href="/culture" style="color:#333">
+                        <a href="/culture?filter=index" style="color:#333">
                             <p>走进长和</p>
                             <p class="ywfont">About Changhe</p>
                         </a>
@@ -27,17 +27,17 @@
 
                     <ul>
                         <li>
-                        <a href="/culture" style="color:#333">
+                        <a href="/culture?filter=index" style="color:#333">
                                 <p>企业简介</p>
                             </a>
                         </li>
                         <li>
-                        <a href="/culture" style="color:#333">
+                        <a href="/culture?filter=culture" style="color:#333">
                                 <p>企业文化</p>
                             </a>
                         </li>
                         <li>
-                        <a href="/culture" style="color:#333">
+                        <a href="/culture?filter=mien" style="color:#333">
                                 <p>企业风采</p>
                             </a>
                         </li>
@@ -83,7 +83,7 @@
             <div>
                 <li class="fl">
                     <div class="header-nav-content">
-                        <a href="/joinus" style="color:#333">
+                        <a href="/joinus?filter=index" style="color:#333">
                             <p>人才招聘</p>
                             <p class="ywfont">Talent Center</p>
                         </a>
@@ -92,17 +92,17 @@
                     </div>
                     <ul>
                         <li>
-                            <a href="/joinus" style="color:#333">
+                            <a href="/joinus?filter=index" style="color:#333">
                                 <p>招聘信息</p>
                             </a>
                         </li>
                         <li>
-                            <a href="/joinus" style="color:#333">
+                            <a href="/joinus?filter=welfare" style="color:#333">
                                 <p>员工福利</p>
                             </a>
                         </li>
                         <li>
-                            <a href="/joinus" style="color:#333">
+                            <a href="/joinus?filter=training" style="color:#333">
                                 <p>员工培训</p>
                             </a>
                         </li>

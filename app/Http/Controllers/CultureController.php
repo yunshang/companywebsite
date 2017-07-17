@@ -29,10 +29,11 @@ class CultureController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $setting = parent::getsetting($this->setting);
+        $filter = $request->get('filter');
         $enterprisestyles = $this->enterprisestyle->getAllEnteriseStyles();
-        return view('culture',compact(['enterprisestyles','setting']));
+        return view('culture',compact(['enterprisestyles','setting','filter']));
     }
 }

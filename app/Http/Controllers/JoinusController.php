@@ -36,12 +36,13 @@ class JoinusController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $setting = parent::getsetting($this->setting);
         $positions = $this->position->getAllPositions();
         $entries = $this->entry->getAllEntries();
-        return view('joinus', compact(['positions','entries','setting']));
+        $filter = $request->get('filter');
+        return view('joinus', compact(['positions','entries','setting','filter']));
     }
 
     public function store(Request $request)

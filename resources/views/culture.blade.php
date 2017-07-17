@@ -13,15 +13,21 @@
     <div class=" main-countent-nav">
         <div class="title cf">
             <ul class="title-list fl cf ">
-                <li class="on">企业简介</li>
-                <li>企业文化</li>
-                <li>企业风采</li>
+                <li class="{{$filter == 'index' ? 'on' : ''}}" >企业简介</li>
+                <li class="{{$filter == 'culture' ? 'on' : ''}}">企业文化</li>
+                <li class="{{$filter == 'mien' ? 'on' : ''}}">企业风采</li>
+                @if ($filter == 'index')
                 <p><b></b></p>
+                @elseif ($filter == 'culture')
+                <p style="left: 146px;"><b></b></p>
+                @else
+                <p style="left: 292px;"><b></b></p>
+                @endif
             </ul>
         </div>
         <div class="product-wrap">
             <!--案例1-->
-            <div class="product show" style="display: block;" id="intro">
+            <div class="product" style="display: {{$filter == 'index' ? 'block' : 'none' }};" id="intro">
                 <section>
                     <div class="cultre-main">
                         <div class="tabs-main-changh main-qyjj">
@@ -131,7 +137,7 @@
                 </section>
             </div>
             <!--案例2-->
-            <div class="product" id="cul">
+            <div class="product" style="display: {{$filter == 'culture' ? 'block' : 'none' }};" id="intro">
                 <section>
                     <div class="cultre-main">
                         <div class="tabs-main-changh main-hxjz">
@@ -193,7 +199,7 @@
                 </section>
             </div>
             <!--案例3-->
-            <div class="product" id="sty">
+            <div class="product" style="display: {{$filter == 'mien' ? 'block' : 'none' }};" id="sty">
                 <section>
                     @foreach($enterprisestyles as $enterprisestyle)
                     <div class="cultre-qyfc">

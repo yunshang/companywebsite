@@ -17,12 +17,18 @@
                 @foreach($entries as $entry)
                 <li>{{$entry->title}}</li>
                 @endforeach
+                @if ($filter == 'index')
                 <p><b></b></p>
+                @elseif ($filter == 'welfare')
+                <p style="left: 146px;"><b></b></p>
+                @else
+                <p style="left: 292px;"><b></b></p>
+                @endif
             </ul>
         </div>
         <div class="product-wrap">
             <!--招聘信息-->
-            <div class="product show" style="display: block;">
+            <div class="product show" style="display: {{$filter == 'index' ? 'block' : 'none' }};">
                 <section>
                     <div class="cultre-main">
                         <div class="cultre-main-join">
@@ -66,7 +72,7 @@
             </div>
             <!--员工福利-->
 
-            <div class="product">
+            <div class="product show" style="display: {{$filter == 'welfare' ? 'block' : 'none' }};">
                 <section>
                     <div class="cultre-main">
                         <div class="cultre-main-text">
@@ -105,7 +111,7 @@
                 </section>
             </div>
 
-            <div class="product">
+            <div class="product show" style="display: {{$filter == 'training' ? 'block' : 'none' }};">
                 <section>
                     <div class="cultre-main">
                         <div class="cultre-main-text">

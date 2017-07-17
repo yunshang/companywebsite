@@ -5,19 +5,19 @@
     <div class="boot-page">
         <div class="boot-page-top wearp-main">
             <div class="boot-page-top-logo fl">
-                <a href="group.html" target="_blank"><img src="images/boot-page/top_logo.png"></a>
+                <a href="/group" target="_blank"><img src="/images/boot-page/top_logo.png"></a>
             </div>
             <div class="boot-page-top-link fr">
                 <ul>
                     <li class="top-meail"><a href="mailto:chhr@cholding.com.cn"  target="_blank"></a> </li>
                     <li class="top-weix"><a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzIzNTc4ODQ5Mg==&scene=124#wechat_redirect" target="_blank"></a> </li>
                     <li class="top-sina"><a href="http://weibo.com/changheqc" target="_blank"></a> </li>
-                    <li class="top-phone"><a href="contact-us.html" target="_blank"></a> </li>
+                    <li class="top-phone"><a href="/contactus" target="_blank"></a> </li>
                 </ul>
             </div>
         </div>
         <div class="boot-page-main-text">
-            <a href="group.html" target="_blank"><img src="images/boot-page/bg_texy.png" width="100%"></a>
+            <a href="group.html" target="_blank"><img src="/images/boot-page/bg_texy.png" width="100%"></a>
         </div>
         <div class="boot-page-main wearp-main">
             <div class="boot-page-main-weap">
@@ -25,7 +25,7 @@
                     <dl class="dl-horizontal">
                         <dt>
                             <h3>杭州长合投资管理合伙企业</h3>
-                            <img src="images/boot-page/sub_corp_main_pic2.png">
+                            <img src="/images/boot-page/sub_corp_main_pic2.png">
                         </dt>
                         <dd class="popup">
                             <ul>
@@ -44,7 +44,7 @@
                     <dl class="dl-horizontal">
                         <dt>
                             <h3>杭州长和信息技术有限公司</h3>
-                            <img src="images/boot-page/sub_corp_main_pic3.png"  height="160">
+                            <img src="/images/boot-page/sub_corp_main_pic3.png"  height="160">
                         </dt>
                         <dd class="popup">
                             <ul>
@@ -59,11 +59,11 @@
                 </a>
             </div>
             <div class="boot-page-main-weap ">
-                <a href="automobile.html" target="_blank">
+                <a href="/subsidiary" target="_blank">
                     <dl class="dl-horizontal">
                         <dt>
                             <h3>杭州长合汽车销售服务有限公司</h3>
-                            <img src="images/boot-page/sub_corp_main_pic5.png"  height="160">
+                            <img src="/images/boot-page/sub_corp_main_pic5.png"  height="160">
                         </dt>
                         <dd class="popup">
                             <ul>
@@ -83,7 +83,7 @@
                     <dl class="dl-horizontal">
                         <dt>
                             <h3>杭州泉禾二手车鉴定评估有限公司</h3>
-                            <img src="images/boot-page/sub_corp_main_pic4.png"  height="160">
+                            <img src="/images/boot-page/sub_corp_main_pic4.png"  height="160">
                         </dt>
                         <dd class="popup">
                             <ul>
@@ -102,7 +102,7 @@
                     <dl class="dl-horizontal">
                         <dt>
                             <h3>浙江皓庭资产管理有限公司</h3>
-                            <img src="images/boot-page/sub_corp_main_pic1.png"  height="160">
+                            <img src="/images/boot-page/sub_corp_main_pic1.png"  height="160">
                         </dt>
                         <dd class="popup">
                             <ul>
@@ -121,7 +121,7 @@
                     <dl class="dl-horizontal">
                         <dt>
                             <h3>长和融资租赁（上海）有限公司</h3>
-                            <img src="images/boot-page/sub_corp_main_pic.png" height="160">
+                            <img src="/images/boot-page/sub_corp_main_pic.png" height="160">
                         </dt>
                         <dd class="popup">
                             <ul>
