@@ -30,7 +30,7 @@ class ArticleRepository
     public function filterArticles($filter)
     {
         $articlekind = ArticleKind::where('name',$filter=='company' ? '公司新闻' : '行业新闻')->firstOrFail();
-        return $articlekind ->allarticles()->published()->latest('updated_at')->with('user')->paginate(1);
+        return $articlekind ->allarticles()->published()->latest('updated_at')->with('user')->paginate(5);
     }
     
     public function getlastArticles()
@@ -41,12 +41,12 @@ class ArticleRepository
     public function getcompanyArticles()
     {
         $articlekind = ArticleKind::where('name','公司新闻')->firstOrFail();
-        return $articlekind ->allarticles()->published()->latest('updated_at')->with('user')->paginate(1);
+        return $articlekind ->allarticles()->published()->latest('updated_at')->with('user')->paginate(5);
     }
 
     public function getindustryArticles()
     {
         $articlekind = ArticleKind::where('name','行业新闻')->firstOrFail();
-        return $articlekind ->allarticles()->published()->latest('updated_at')->with('user')->paginate(1);
+        return $articlekind ->allarticles()->published()->latest('updated_at')->with('user')->paginate(5);
     }
 }
